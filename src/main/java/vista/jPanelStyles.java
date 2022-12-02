@@ -3,7 +3,6 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package vista;
-
 /**
  *
  * @author victo
@@ -43,14 +42,27 @@ public class jPanelStyles extends javax.swing.JFrame {
         jPanelIntense = new javax.swing.JPanel();
         lFuenteIn = new javax.swing.JLabel();
         lIntense = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jList1 = new javax.swing.JList<>();
+        jPanelTittle1 = new javax.swing.JPanel();
+        lFuenteT1 = new javax.swing.JLabel();
+        lTitle1 = new javax.swing.JLabel();
+        jPanelSubtittle1 = new javax.swing.JPanel();
+        lFuenteSub1 = new javax.swing.JLabel();
+        lSubtitle1 = new javax.swing.JLabel();
+        jPanelSubtle1 = new javax.swing.JPanel();
+        lFuenteSubtle1 = new javax.swing.JLabel();
+        lSubtle1 = new javax.swing.JLabel();
+        jPanelEmphasis1 = new javax.swing.JPanel();
+        lFuenteEm1 = new javax.swing.JLabel();
+        lEmphasis1 = new javax.swing.JLabel();
+        jPanelIntense1 = new javax.swing.JPanel();
+        lFuenteIn1 = new javax.swing.JLabel();
+        lIntense1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setName("jFrameStyles"); // NOI18N
 
         styles.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        styles.setText("Styles");
+        styles.setText("Estilos");
 
         jPanelTittle.setPreferredSize(new java.awt.Dimension(150, 100));
 
@@ -59,7 +71,7 @@ public class jPanelStyles extends javax.swing.JFrame {
         lFuenteT.setText("AaB");
 
         lTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lTitle.setText("Title");
+        lTitle.setText("Titulo");
 
         javax.swing.GroupLayout jPanelTittleLayout = new javax.swing.GroupLayout(jPanelTittle);
         jPanelTittle.setLayout(jPanelTittleLayout);
@@ -89,7 +101,7 @@ public class jPanelStyles extends javax.swing.JFrame {
         lFuenteSub.setText("AaBbCcD");
 
         lSubtitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lSubtitle.setText("Subtitle");
+        lSubtitle.setText("Subtitulo");
 
         javax.swing.GroupLayout jPanelSubtittleLayout = new javax.swing.GroupLayout(jPanelSubtittle);
         jPanelSubtittle.setLayout(jPanelSubtittleLayout);
@@ -119,7 +131,7 @@ public class jPanelStyles extends javax.swing.JFrame {
         lFuenteSubtle.setText("AaBbCcDd");
 
         lSubtle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lSubtle.setText("Subtle Emphasis");
+        lSubtle.setText("Énfasis");
 
         javax.swing.GroupLayout jPanelSubtleLayout = new javax.swing.GroupLayout(jPanelSubtle);
         jPanelSubtle.setLayout(jPanelSubtleLayout);
@@ -149,7 +161,7 @@ public class jPanelStyles extends javax.swing.JFrame {
         lFuenteEm.setText("AaBbCcDd");
 
         lEmphasis.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lEmphasis.setText("Emphasis");
+        lEmphasis.setText("Énfasis intenso");
 
         javax.swing.GroupLayout jPanelEmphasisLayout = new javax.swing.GroupLayout(jPanelEmphasis);
         jPanelEmphasis.setLayout(jPanelEmphasisLayout);
@@ -180,7 +192,7 @@ public class jPanelStyles extends javax.swing.JFrame {
         lFuenteIn.setText("AaBbCcDd");
 
         lIntense.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lIntense.setText("Intense Emphasis");
+        lIntense.setText("Énfasis comentario");
 
         javax.swing.GroupLayout jPanelIntenseLayout = new javax.swing.GroupLayout(jPanelIntense);
         jPanelIntense.setLayout(jPanelIntenseLayout);
@@ -203,21 +215,183 @@ public class jPanelStyles extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        jPanelTittle1.setPreferredSize(new java.awt.Dimension(150, 100));
+
+        lFuenteT1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lFuenteT1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lFuenteT1.setText("AaBbCcDd");
+
+        lTitle1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lTitle1.setText("Normal");
+
+        javax.swing.GroupLayout jPanelTittle1Layout = new javax.swing.GroupLayout(jPanelTittle1);
+        jPanelTittle1.setLayout(jPanelTittle1Layout);
+        jPanelTittle1Layout.setHorizontalGroup(
+            jPanelTittle1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelTittle1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanelTittle1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lFuenteT1, javax.swing.GroupLayout.DEFAULT_SIZE, 138, Short.MAX_VALUE)
+                    .addComponent(lTitle1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+        jPanelTittle1Layout.setVerticalGroup(
+            jPanelTittle1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelTittle1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lFuenteT1, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(lTitle1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jPanelSubtittle1.setPreferredSize(new java.awt.Dimension(150, 100));
+
+        lFuenteSub1.setFont(new java.awt.Font("DejaVu Sans", 0, 24)); // NOI18N
+        lFuenteSub1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lFuenteSub1.setText("AaBbCcD");
+
+        lSubtitle1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lSubtitle1.setText("Título 1");
+
+        javax.swing.GroupLayout jPanelSubtittle1Layout = new javax.swing.GroupLayout(jPanelSubtittle1);
+        jPanelSubtittle1.setLayout(jPanelSubtittle1Layout);
+        jPanelSubtittle1Layout.setHorizontalGroup(
+            jPanelSubtittle1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelSubtittle1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanelSubtittle1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lFuenteSub1, javax.swing.GroupLayout.DEFAULT_SIZE, 138, Short.MAX_VALUE)
+                    .addComponent(lSubtitle1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+        jPanelSubtittle1Layout.setVerticalGroup(
+            jPanelSubtittle1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelSubtittle1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lFuenteSub1, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(lSubtitle1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jPanelSubtle1.setPreferredSize(new java.awt.Dimension(150, 100));
+
+        lFuenteSubtle1.setFont(new java.awt.Font("Sitka Text", 2, 18)); // NOI18N
+        lFuenteSubtle1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lFuenteSubtle1.setText("AaBbCcDd");
+
+        lSubtle1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lSubtle1.setText("Referencia sutil");
+
+        javax.swing.GroupLayout jPanelSubtle1Layout = new javax.swing.GroupLayout(jPanelSubtle1);
+        jPanelSubtle1.setLayout(jPanelSubtle1Layout);
+        jPanelSubtle1Layout.setHorizontalGroup(
+            jPanelSubtle1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelSubtle1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanelSubtle1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lFuenteSubtle1, javax.swing.GroupLayout.DEFAULT_SIZE, 138, Short.MAX_VALUE)
+                    .addComponent(lSubtle1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+        jPanelSubtle1Layout.setVerticalGroup(
+            jPanelSubtle1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelSubtle1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lFuenteSubtle1, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(lSubtle1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jPanelEmphasis1.setPreferredSize(new java.awt.Dimension(150, 100));
+
+        lFuenteEm1.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        lFuenteEm1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lFuenteEm1.setText("AaBbCcDd");
+
+        lEmphasis1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lEmphasis1.setText("Título del libro");
+
+        javax.swing.GroupLayout jPanelEmphasis1Layout = new javax.swing.GroupLayout(jPanelEmphasis1);
+        jPanelEmphasis1.setLayout(jPanelEmphasis1Layout);
+        jPanelEmphasis1Layout.setHorizontalGroup(
+            jPanelEmphasis1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelEmphasis1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanelEmphasis1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lFuenteEm1, javax.swing.GroupLayout.DEFAULT_SIZE, 138, Short.MAX_VALUE)
+                    .addComponent(lEmphasis1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+        jPanelEmphasis1Layout.setVerticalGroup(
+            jPanelEmphasis1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelEmphasis1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lFuenteEm1, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(lEmphasis1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jPanelIntense1.setPreferredSize(new java.awt.Dimension(150, 100));
+
+        lFuenteIn1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lFuenteIn1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lFuenteIn1.setText("AaBbCcDd");
+
+        lIntense1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lIntense1.setText("Párrafo de lista");
+
+        javax.swing.GroupLayout jPanelIntense1Layout = new javax.swing.GroupLayout(jPanelIntense1);
+        jPanelIntense1.setLayout(jPanelIntense1Layout);
+        jPanelIntense1Layout.setHorizontalGroup(
+            jPanelIntense1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelIntense1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanelIntense1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lFuenteIn1, javax.swing.GroupLayout.DEFAULT_SIZE, 138, Short.MAX_VALUE)
+                    .addComponent(lIntense1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+        jPanelIntense1Layout.setVerticalGroup(
+            jPanelIntense1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelIntense1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lFuenteIn1, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(lIntense1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
         javax.swing.GroupLayout jPanelPanelesLayout = new javax.swing.GroupLayout(jPanelPaneles);
         jPanelPaneles.setLayout(jPanelPanelesLayout);
         jPanelPanelesLayout.setHorizontalGroup(
             jPanelPanelesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelPanelesLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanelTittle, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanelSubtittle, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanelSubtle, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanelEmphasis, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanelIntense, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanelPanelesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanelPanelesLayout.createSequentialGroup()
+                        .addComponent(jPanelTittle, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jPanelSubtittle, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jPanelSubtle, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jPanelEmphasis, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jPanelIntense, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanelPanelesLayout.createSequentialGroup()
+                        .addComponent(jPanelTittle1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jPanelSubtittle1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jPanelSubtle1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jPanelEmphasis1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jPanelIntense1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
         jPanelPanelesLayout.setVerticalGroup(
@@ -230,16 +404,15 @@ public class jPanelStyles extends javax.swing.JFrame {
                     .addComponent(jPanelSubtle, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jPanelEmphasis, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jPanelIntense, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap())
+                .addGap(18, 18, 18)
+                .addGroup(jPanelPanelesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanelTittle1, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanelSubtittle1, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanelSubtle1, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanelEmphasis1, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanelIntense1, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(20, Short.MAX_VALUE))
         );
-
-        jList1.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Ttile", "Subtitle", "Subtle Emphasis", "Emphasis", "Intense Emphasis" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
-        jList1.setLayoutOrientation(javax.swing.JList.HORIZONTAL_WRAP);
-        jScrollPane1.setViewportView(jList1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -253,18 +426,12 @@ public class jPanelStyles extends javax.swing.JFrame {
                         .addGap(0, 13, Short.MAX_VALUE)
                         .addComponent(jPanelPaneles, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
-            .addGroup(layout.createSequentialGroup()
-                .addGap(44, 44, 44)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 329, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanelPaneles, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(112, 112, 112)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 206, Short.MAX_VALUE)
+                .addComponent(jPanelPaneles, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(styles, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -305,34 +472,41 @@ public class jPanelStyles extends javax.swing.JFrame {
                 new jPanelStyles().setVisible(true);
             }
         });
+        
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel9;
-    private javax.swing.JList<String> jList1;
-    private javax.swing.JPanel jPanel10;
-    private javax.swing.JPanel jPanel11;
-    private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanelEmphasis;
+    private javax.swing.JPanel jPanelEmphasis1;
     private javax.swing.JPanel jPanelIntense;
+    private javax.swing.JPanel jPanelIntense1;
     private javax.swing.JPanel jPanelPaneles;
     private javax.swing.JPanel jPanelSubtittle;
+    private javax.swing.JPanel jPanelSubtittle1;
     private javax.swing.JPanel jPanelSubtle;
+    private javax.swing.JPanel jPanelSubtle1;
     private javax.swing.JPanel jPanelTittle;
-    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JPanel jPanelTittle1;
     private javax.swing.JLabel lEmphasis;
+    private javax.swing.JLabel lEmphasis1;
     private javax.swing.JLabel lFuenteEm;
+    private javax.swing.JLabel lFuenteEm1;
     private javax.swing.JLabel lFuenteIn;
+    private javax.swing.JLabel lFuenteIn1;
     private javax.swing.JLabel lFuenteSub;
+    private javax.swing.JLabel lFuenteSub1;
     private javax.swing.JLabel lFuenteSubtle;
+    private javax.swing.JLabel lFuenteSubtle1;
     private javax.swing.JLabel lFuenteT;
+    private javax.swing.JLabel lFuenteT1;
     private javax.swing.JLabel lIntense;
+    private javax.swing.JLabel lIntense1;
     private javax.swing.JLabel lSubtitle;
+    private javax.swing.JLabel lSubtitle1;
     private javax.swing.JLabel lSubtle;
+    private javax.swing.JLabel lSubtle1;
     private javax.swing.JLabel lTitle;
+    private javax.swing.JLabel lTitle1;
     private javax.swing.JLabel styles;
     // End of variables declaration//GEN-END:variables
 }

@@ -39,8 +39,6 @@ public class jPanelSuperior extends javax.swing.JFrame {
         jtpLayout = new javax.swing.JPanel();
         jtpReferences = new javax.swing.JPanel();
         jtpMailings = new javax.swing.JPanel();
-        jtpReview = new javax.swing.JPanel();
-        jtpView = new javax.swing.JPanel();
         jPanelScrollTop = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -56,7 +54,7 @@ public class jPanelSuperior extends javax.swing.JFrame {
             .addGap(0, 254, Short.MAX_VALUE)
         );
 
-        jTabbedPane.addTab("File", jtpFile);
+        jTabbedPane.addTab("Archivo", jtpFile);
 
         jPanel1.setBackground(new java.awt.Color(102, 255, 204));
 
@@ -153,7 +151,7 @@ public class jPanelSuperior extends javax.swing.JFrame {
                 .addContainerGap(61, Short.MAX_VALUE))
         );
 
-        jTabbedPane.addTab("Home", jtpHome);
+        jTabbedPane.addTab("Inicio", jtpHome);
 
         javax.swing.GroupLayout jtpInsertLayout = new javax.swing.GroupLayout(jtpInsert);
         jtpInsert.setLayout(jtpInsertLayout);
@@ -166,7 +164,7 @@ public class jPanelSuperior extends javax.swing.JFrame {
             .addGap(0, 254, Short.MAX_VALUE)
         );
 
-        jTabbedPane.addTab("Insert", jtpInsert);
+        jTabbedPane.addTab("Insertar", jtpInsert);
 
         javax.swing.GroupLayout jtpDesignLayout = new javax.swing.GroupLayout(jtpDesign);
         jtpDesign.setLayout(jtpDesignLayout);
@@ -179,7 +177,7 @@ public class jPanelSuperior extends javax.swing.JFrame {
             .addGap(0, 254, Short.MAX_VALUE)
         );
 
-        jTabbedPane.addTab("Design", jtpDesign);
+        jTabbedPane.addTab("Presentación", jtpDesign);
 
         javax.swing.GroupLayout jtpLayoutLayout = new javax.swing.GroupLayout(jtpLayout);
         jtpLayout.setLayout(jtpLayoutLayout);
@@ -192,7 +190,7 @@ public class jPanelSuperior extends javax.swing.JFrame {
             .addGap(0, 254, Short.MAX_VALUE)
         );
 
-        jTabbedPane.addTab("Layout", jtpLayout);
+        jTabbedPane.addTab("Revisar", jtpLayout);
 
         javax.swing.GroupLayout jtpReferencesLayout = new javax.swing.GroupLayout(jtpReferences);
         jtpReferences.setLayout(jtpReferencesLayout);
@@ -205,7 +203,7 @@ public class jPanelSuperior extends javax.swing.JFrame {
             .addGap(0, 254, Short.MAX_VALUE)
         );
 
-        jTabbedPane.addTab("References", jtpReferences);
+        jTabbedPane.addTab("Vista", jtpReferences);
 
         javax.swing.GroupLayout jtpMailingsLayout = new javax.swing.GroupLayout(jtpMailings);
         jtpMailings.setLayout(jtpMailingsLayout);
@@ -218,33 +216,7 @@ public class jPanelSuperior extends javax.swing.JFrame {
             .addGap(0, 254, Short.MAX_VALUE)
         );
 
-        jTabbedPane.addTab("Mailings", jtpMailings);
-
-        javax.swing.GroupLayout jtpReviewLayout = new javax.swing.GroupLayout(jtpReview);
-        jtpReview.setLayout(jtpReviewLayout);
-        jtpReviewLayout.setHorizontalGroup(
-            jtpReviewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1030, Short.MAX_VALUE)
-        );
-        jtpReviewLayout.setVerticalGroup(
-            jtpReviewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 254, Short.MAX_VALUE)
-        );
-
-        jTabbedPane.addTab("Review", jtpReview);
-
-        javax.swing.GroupLayout jtpViewLayout = new javax.swing.GroupLayout(jtpView);
-        jtpView.setLayout(jtpViewLayout);
-        jtpViewLayout.setHorizontalGroup(
-            jtpViewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1030, Short.MAX_VALUE)
-        );
-        jtpViewLayout.setVerticalGroup(
-            jtpViewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 254, Short.MAX_VALUE)
-        );
-
-        jTabbedPane.addTab("View", jtpView);
+        jTabbedPane.addTab("Ayuda", jtpMailings);
 
         jPanelScrollTop.setBackground(new java.awt.Color(255, 0, 204));
 
@@ -341,7 +313,5 @@ public class jPanelSuperior extends javax.swing.JFrame {
     private javax.swing.JPanel jtpLayout;
     private javax.swing.JPanel jtpMailings;
     private javax.swing.JPanel jtpReferences;
-    private javax.swing.JPanel jtpReview;
-    private javax.swing.JPanel jtpView;
     // End of variables declaration//GEN-END:variables
 }

@@ -26,17 +26,80 @@ public class jPanelEditing extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel4 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jPanel5 = new javax.swing.JPanel();
+        jPanelEdicionBuscar = new javax.swing.JPanel();
+        edicionBuscar = new javax.swing.JButton();
+        jPanelEdicionReemplazar = new javax.swing.JPanel();
+        edicionReemplazar = new javax.swing.JButton();
+        jPanelEdicionSeleccionar = new javax.swing.JPanel();
+        edicionSeleccionar = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("Edición");
+
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 22, Short.MAX_VALUE))
+        );
+
+        jPanel5.setLayout(new java.awt.GridLayout(3, 1));
+
+        jPanelEdicionBuscar.setLayout(new java.awt.BorderLayout());
+
+        edicionBuscar.setIcon(new javax.swing.ImageIcon("C:\\Users\\victo\\OneDrive\\Documentos\\NetBeansProjects\\iconosWordI\\iconosWordI\\Editar\\buscar (1).png")); // NOI18N
+        edicionBuscar.setText("Buscar");
+        edicionBuscar.setMargin(new java.awt.Insets(12, 14, 12, 14));
+        jPanelEdicionBuscar.add(edicionBuscar, java.awt.BorderLayout.CENTER);
+
+        jPanel5.add(jPanelEdicionBuscar);
+
+        jPanelEdicionReemplazar.setLayout(new java.awt.BorderLayout());
+
+        edicionReemplazar.setIcon(new javax.swing.ImageIcon("C:\\Users\\victo\\OneDrive\\Documentos\\NetBeansProjects\\iconosWordI\\iconosWordI\\Editar\\reemplazarW.png")); // NOI18N
+        edicionReemplazar.setText("Reemplazar");
+        edicionReemplazar.setMargin(new java.awt.Insets(12, 14, 12, 14));
+        jPanelEdicionReemplazar.add(edicionReemplazar, java.awt.BorderLayout.CENTER);
+
+        jPanel5.add(jPanelEdicionReemplazar);
+
+        jPanelEdicionSeleccionar.setLayout(new java.awt.BorderLayout());
+
+        edicionSeleccionar.setIcon(new javax.swing.ImageIcon("C:\\Users\\victo\\OneDrive\\Documentos\\NetBeansProjects\\iconosWordI\\iconosWordI\\Editar\\seleccionar (1).png")); // NOI18N
+        edicionSeleccionar.setText("Seleccionar");
+        edicionSeleccionar.setMargin(new java.awt.Insets(12, 14, 12, 14));
+        jPanelEdicionSeleccionar.add(edicionSeleccionar, java.awt.BorderLayout.CENTER);
+
+        jPanel5.add(jPanelEdicionSeleccionar);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 208, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 331, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(1, 1, 1)
+                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         pack();
@@ -78,5 +141,14 @@ public class jPanelEditing extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton edicionBuscar;
+    private javax.swing.JButton edicionReemplazar;
+    private javax.swing.JButton edicionSeleccionar;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanelEdicionBuscar;
+    private javax.swing.JPanel jPanelEdicionReemplazar;
+    private javax.swing.JPanel jPanelEdicionSeleccionar;
     // End of variables declaration//GEN-END:variables
 }
