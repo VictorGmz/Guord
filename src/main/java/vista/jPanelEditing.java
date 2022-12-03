@@ -26,9 +26,9 @@ public class jPanelEditing extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel4 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jPanel5 = new javax.swing.JPanel();
+        panelEdicion = new javax.swing.JPanel();
+        jLabeledicion = new javax.swing.JLabel();
+        jPanelPaneles = new javax.swing.JPanel();
         jPanelEdicionBuscar = new javax.swing.JPanel();
         edicionBuscar = new javax.swing.JButton();
         jPanelEdicionReemplazar = new javax.swing.JPanel();
@@ -38,23 +38,23 @@ public class jPanelEditing extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Edición");
+        jLabeledicion.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabeledicion.setText("Edición");
 
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        javax.swing.GroupLayout panelEdicionLayout = new javax.swing.GroupLayout(panelEdicion);
+        panelEdicion.setLayout(panelEdicionLayout);
+        panelEdicionLayout.setHorizontalGroup(
+            panelEdicionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabeledicion, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
+        panelEdicionLayout.setVerticalGroup(
+            panelEdicionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelEdicionLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 22, Short.MAX_VALUE))
+                .addComponent(jLabeledicion, javax.swing.GroupLayout.DEFAULT_SIZE, 22, Short.MAX_VALUE))
         );
 
-        jPanel5.setLayout(new java.awt.GridLayout(3, 1));
+        jPanelPaneles.setLayout(new java.awt.GridLayout(3, 1));
 
         jPanelEdicionBuscar.setLayout(new java.awt.BorderLayout());
 
@@ -63,7 +63,7 @@ public class jPanelEditing extends javax.swing.JFrame {
         edicionBuscar.setMargin(new java.awt.Insets(12, 14, 12, 14));
         jPanelEdicionBuscar.add(edicionBuscar, java.awt.BorderLayout.CENTER);
 
-        jPanel5.add(jPanelEdicionBuscar);
+        jPanelPaneles.add(jPanelEdicionBuscar);
 
         jPanelEdicionReemplazar.setLayout(new java.awt.BorderLayout());
 
@@ -72,7 +72,7 @@ public class jPanelEditing extends javax.swing.JFrame {
         edicionReemplazar.setMargin(new java.awt.Insets(12, 14, 12, 14));
         jPanelEdicionReemplazar.add(edicionReemplazar, java.awt.BorderLayout.CENTER);
 
-        jPanel5.add(jPanelEdicionReemplazar);
+        jPanelPaneles.add(jPanelEdicionReemplazar);
 
         jPanelEdicionSeleccionar.setLayout(new java.awt.BorderLayout());
 
@@ -81,7 +81,7 @@ public class jPanelEditing extends javax.swing.JFrame {
         edicionSeleccionar.setMargin(new java.awt.Insets(12, 14, 12, 14));
         jPanelEdicionSeleccionar.add(edicionSeleccionar, java.awt.BorderLayout.CENTER);
 
-        jPanel5.add(jPanelEdicionSeleccionar);
+        jPanelPaneles.add(jPanelEdicionSeleccionar);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -89,16 +89,16 @@ public class jPanelEditing extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jPanelPaneles, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(panelEdicion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jPanelPaneles, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(1, 1, 1)
-                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(panelEdicion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
@@ -144,11 +144,11 @@ public class jPanelEditing extends javax.swing.JFrame {
     private javax.swing.JButton edicionBuscar;
     private javax.swing.JButton edicionReemplazar;
     private javax.swing.JButton edicionSeleccionar;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel5;
+    private javax.swing.JLabel jLabeledicion;
     private javax.swing.JPanel jPanelEdicionBuscar;
     private javax.swing.JPanel jPanelEdicionReemplazar;
     private javax.swing.JPanel jPanelEdicionSeleccionar;
+    private javax.swing.JPanel jPanelPaneles;
+    private javax.swing.JPanel panelEdicion;
     // End of variables declaration//GEN-END:variables
 }
