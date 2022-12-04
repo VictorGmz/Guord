@@ -4,7 +4,7 @@
  */
 package vista;
 
-import org.jdesktop.swingx.autocomplete.AutoCompleteDecorator;
+
 
 /**
  *
@@ -55,16 +55,16 @@ public class Vista extends javax.swing.JFrame {
         jButton49 = new javax.swing.JButton();
         jButton50 = new javax.swing.JButton();
         jComboBox3 = new javax.swing.JComboBox<>();
-        jPanel11 = new javax.swing.JPanel();
-        jButton51 = new javax.swing.JButton();
-        jButton52 = new javax.swing.JButton();
-        jButton53 = new javax.swing.JButton();
-        jButton54 = new javax.swing.JButton();
-        jButton55 = new javax.swing.JButton();
-        jButton56 = new javax.swing.JButton();
-        jButton57 = new javax.swing.JButton();
-        jButton58 = new javax.swing.JButton();
-        jButton59 = new javax.swing.JButton();
+        jPanel6 = new javax.swing.JPanel();
+        jButton16 = new javax.swing.JButton();
+        jButton17 = new javax.swing.JButton();
+        jButton18 = new javax.swing.JButton();
+        jButton19 = new javax.swing.JButton();
+        jButton20 = new javax.swing.JButton();
+        jButton21 = new javax.swing.JButton();
+        jButton22 = new javax.swing.JButton();
+        jButton23 = new javax.swing.JButton();
+        jButton24 = new javax.swing.JButton();
         jPanelPárrafo = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jPanel7 = new javax.swing.JPanel();
@@ -83,7 +83,6 @@ public class Vista extends javax.swing.JFrame {
         jButton14 = new javax.swing.JButton();
         jButton46 = new javax.swing.JButton();
         jPanelStilos = new javax.swing.JPanel();
-        styles = new javax.swing.JLabel();
         jPanelPaneles = new javax.swing.JPanel();
         jPanelTittle = new javax.swing.JPanel();
         lFuenteT = new javax.swing.JLabel();
@@ -125,6 +124,7 @@ public class Vista extends javax.swing.JFrame {
         edicionReemplazar = new javax.swing.JButton();
         jPanelEdicionSeleccionar = new javax.swing.JPanel();
         edicionSeleccionar = new javax.swing.JButton();
+        styles = new javax.swing.JLabel();
         jtpInsert = new javax.swing.JPanel();
         jtpDesign = new javax.swing.JPanel();
         jtpLayout = new javax.swing.JPanel();
@@ -185,19 +185,13 @@ public class Vista extends javax.swing.JFrame {
         jPanel3.setLayout(new javax.swing.BoxLayout(jPanel3, javax.swing.BoxLayout.X_AXIS));
 
         jPanelPortapapeles.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
-        jPanelPortapapeles.setLayout(new java.awt.GridBagLayout());
 
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Portapapeles");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 3;
-        gridBagConstraints.ipadx = 162;
-        gridBagConstraints.ipady = 153;
-        jPanelPortapapeles.add(jLabel1, gridBagConstraints);
 
         jPanel4.setLayout(new java.awt.GridBagLayout());
 
+        btnPaste.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/srcImages/Pegar36x36.png"))); // NOI18N
         btnPaste.setText("Pegar");
         btnPaste.setAlignmentX(0.5F);
         btnPaste.setAlignmentY(0.0F);
@@ -215,6 +209,7 @@ public class Vista extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(6, 6, 6, 0);
         jPanel4.add(btnPaste, gridBagConstraints);
 
+        btnCut.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/srcImages/cortar18x18.png"))); // NOI18N
         btnCut.setText("Cortar");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
@@ -224,6 +219,7 @@ public class Vista extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(6, 12, 0, 0);
         jPanel4.add(btnCut, gridBagConstraints);
 
+        btnCopy.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/srcImages/copiar18x18.png"))); // NOI18N
         btnCopy.setText("Copiar");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
@@ -234,6 +230,7 @@ public class Vista extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(12, 12, 0, 0);
         jPanel4.add(btnCopy, gridBagConstraints);
 
+        btnFormat.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/srcImages/copiarFormato18x18.png"))); // NOI18N
         btnFormat.setText("Clonar formato");
         btnFormat.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -247,11 +244,28 @@ public class Vista extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(28, 12, 0, 6);
         jPanel4.add(btnFormat, gridBagConstraints);
 
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 0;
-        gridBagConstraints.insets = new java.awt.Insets(24, 0, 0, 0);
-        jPanelPortapapeles.add(jPanel4, gridBagConstraints);
+        javax.swing.GroupLayout jPanelPortapapelesLayout = new javax.swing.GroupLayout(jPanelPortapapeles);
+        jPanelPortapapeles.setLayout(jPanelPortapapelesLayout);
+        jPanelPortapapelesLayout.setHorizontalGroup(
+            jPanelPortapapelesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelPortapapelesLayout.createSequentialGroup()
+                .addGap(31, 31, 31)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(25, 25, 25))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelPortapapelesLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        jPanelPortapapelesLayout.setVerticalGroup(
+            jPanelPortapapelesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelPortapapelesLayout.createSequentialGroup()
+                .addContainerGap(43, Short.MAX_VALUE)
+                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
 
         jPanel3.add(jPanelPortapapeles);
 
@@ -273,7 +287,7 @@ public class Vista extends javax.swing.JFrame {
 
         jPanel10.setLayout(new java.awt.GridBagLayout());
 
-        jButton47.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/srcImagen/reducir fuente.png"))); // NOI18N
+        jButton47.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/srcImages/reducir fuente.png"))); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 0;
@@ -298,7 +312,7 @@ public class Vista extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(7, 8, 7, 8);
         jPanel10.add(jComboBox2, gridBagConstraints);
 
-        jButton48.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/srcImagen/icons8-aumentar-fuente-24.png"))); // NOI18N
+        jButton48.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/srcImages/icons8-aumentar-fuente-24.png"))); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 0;
@@ -308,7 +322,7 @@ public class Vista extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(7, 8, 7, 8);
         jPanel10.add(jButton48, gridBagConstraints);
 
-        jButton49.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/srcImagen/icons8-mayúscula-inicial-24.png"))); // NOI18N
+        jButton49.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/srcImages/icons8-mayúscula-inicial-24.png"))); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
         gridBagConstraints.gridy = 0;
@@ -318,7 +332,7 @@ public class Vista extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(7, 8, 7, 8);
         jPanel10.add(jButton49, gridBagConstraints);
 
-        jButton50.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/srcImagen/borrarFormato.png"))); // NOI18N
+        jButton50.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/srcImages/borrarFormato.png"))); // NOI18N
         jButton50.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton50ActionPerformed(evt);
@@ -343,123 +357,86 @@ public class Vista extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(7, 8, 7, 8);
         jPanel10.add(jComboBox3, gridBagConstraints);
 
-        jPanel11.setLayout(new java.awt.GridBagLayout());
+        jButton16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/srcImages/icons8-b-18.png"))); // NOI18N
 
-        jButton51.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/srcImagen/icons8-i-18.png"))); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 1;
-        gridBagConstraints.gridy = 0;
-        gridBagConstraints.ipadx = -33;
-        gridBagConstraints.ipady = 34;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.BASELINE;
-        gridBagConstraints.insets = new java.awt.Insets(8, 0, 0, 9);
-        jPanel11.add(jButton51, gridBagConstraints);
+        jButton17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/srcImages/icons8-i-18.png"))); // NOI18N
 
-        jButton52.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/srcImagen/icons8-b-18.png"))); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 0;
-        gridBagConstraints.ipadx = -30;
-        gridBagConstraints.ipady = 34;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.BASELINE;
-        gridBagConstraints.insets = new java.awt.Insets(4, 5, 0, 9);
-        jPanel11.add(jButton52, gridBagConstraints);
+        jButton18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/srcImages/icons8-u-18.png"))); // NOI18N
 
-        jButton53.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/srcImagen/icons8-u-18.png"))); // NOI18N
-        jButton53.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton53ActionPerformed(evt);
-            }
-        });
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 2;
-        gridBagConstraints.gridy = 0;
-        gridBagConstraints.ipadx = -36;
-        gridBagConstraints.ipady = 34;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.BASELINE;
-        gridBagConstraints.insets = new java.awt.Insets(8, 0, 0, 9);
-        jPanel11.add(jButton53, gridBagConstraints);
+        jButton19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/srcImages/tachado.png"))); // NOI18N
 
-        jButton54.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/srcImagen/tachado.png"))); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 3;
-        gridBagConstraints.gridy = 0;
-        gridBagConstraints.ipadx = -32;
-        gridBagConstraints.ipady = 34;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.BASELINE;
-        gridBagConstraints.insets = new java.awt.Insets(8, 0, 0, 9);
-        jPanel11.add(jButton54, gridBagConstraints);
+        jButton20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/srcImages/subindice.png"))); // NOI18N
 
-        jButton55.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/srcImagen/subindice.png"))); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 4;
-        gridBagConstraints.gridy = 0;
-        gridBagConstraints.ipadx = -36;
-        gridBagConstraints.ipady = 34;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.BASELINE;
-        gridBagConstraints.insets = new java.awt.Insets(8, 0, 0, 9);
-        jPanel11.add(jButton55, gridBagConstraints);
+        jButton21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/srcImages/superindice.png"))); // NOI18N
 
-        jButton56.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/srcImagen/superindice.png"))); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 5;
-        gridBagConstraints.gridy = 0;
-        gridBagConstraints.ipadx = -36;
-        gridBagConstraints.ipady = 34;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.BASELINE;
-        gridBagConstraints.insets = new java.awt.Insets(8, 0, 0, 9);
-        jPanel11.add(jButton56, gridBagConstraints);
+        jButton22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/srcImages/efectosTexto.png"))); // NOI18N
 
-        jButton57.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/srcImagen/efectosTexto.png"))); // NOI18N
-        jButton57.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton57ActionPerformed(evt);
-            }
-        });
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 6;
-        gridBagConstraints.gridy = 0;
-        gridBagConstraints.ipadx = -36;
-        gridBagConstraints.ipady = 34;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.BASELINE;
-        gridBagConstraints.insets = new java.awt.Insets(8, 0, 0, 9);
-        jPanel11.add(jButton57, gridBagConstraints);
+        jButton23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/srcImages/colorResaltado.png"))); // NOI18N
 
-        jButton58.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/srcImagen/colorResaltado.png"))); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 7;
-        gridBagConstraints.gridy = 0;
-        gridBagConstraints.ipadx = -35;
-        gridBagConstraints.ipady = 34;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.BASELINE;
-        gridBagConstraints.insets = new java.awt.Insets(8, 0, 0, 9);
-        jPanel11.add(jButton58, gridBagConstraints);
+        jButton24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/srcImages/colorLetra.png"))); // NOI18N
 
-        jButton59.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/srcImagen/colorLetra.png"))); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 8;
-        gridBagConstraints.gridy = 0;
-        gridBagConstraints.ipadx = -30;
-        gridBagConstraints.ipady = 34;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.BASELINE;
-        gridBagConstraints.insets = new java.awt.Insets(8, 0, 0, 9);
-        jPanel11.add(jButton59, gridBagConstraints);
+        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
+        jPanel6.setLayout(jPanel6Layout);
+        jPanel6Layout.setHorizontalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jButton16, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton17, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(16, 16, 16)
+                .addComponent(jButton18, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jButton19, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(34, 34, 34)
+                .addComponent(jButton20, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(29, 29, 29)
+                .addComponent(jButton21, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(31, 31, 31)
+                .addComponent(jButton22, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jButton23, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jButton24, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(73, 73, 73))
+        );
+        jPanel6Layout.setVerticalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButton16, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton17, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton18, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton19, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton20, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton21, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton22, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton23, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton24, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
 
         javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
         jPanel9.setLayout(jPanel9Layout);
         jPanel9Layout.setHorizontalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel10, javax.swing.GroupLayout.DEFAULT_SIZE, 526, Short.MAX_VALUE)
+                .addGap(14, 14, 14))
             .addGroup(jPanel9Layout.createSequentialGroup()
-                .addComponent(jPanel11, javax.swing.GroupLayout.PREFERRED_SIZE, 483, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 63, Short.MAX_VALUE))
-            .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                .addGap(32, 32, 32)
+                .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, 460, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel9Layout.setVerticalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel9Layout.createSequentialGroup()
+                .addGap(25, 25, 25)
                 .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
-                .addComponent(jPanel11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -482,49 +459,60 @@ public class Vista extends javax.swing.JFrame {
 
         jPanel7.setLayout(new java.awt.GridLayout(2, 7, 10, 10));
 
+        btnParrafo1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/srcImages/ordenPuntos.png"))); // NOI18N
         btnParrafo1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jPanel7.add(btnParrafo1);
 
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/srcImages/ordenNumerado.png"))); // NOI18N
         jButton3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton3.setMaximumSize(new java.awt.Dimension(24, 24));
         jPanel7.add(jButton3);
 
+        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/srcImages/ordenFormato.png"))); // NOI18N
         jButton4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jPanel7.add(jButton4);
 
+        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/srcImages/sangriaIzq.png"))); // NOI18N
         jButton5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jPanel7.add(jButton5);
 
+        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/srcImages/sangriaDerch.png"))); // NOI18N
         jButton6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jPanel7.add(jButton6);
 
+        jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/srcImages/ordenar.png"))); // NOI18N
         jButton7.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jPanel7.add(jButton7);
 
-        jButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/srcImagen/alinearDerch.png"))); // NOI18N
+        jButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/srcImages/iconoP.png"))); // NOI18N
         jButton8.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jPanel7.add(jButton8);
 
+        jButton9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/srcImages/alinearIzq.png"))); // NOI18N
         jButton9.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jPanel7.add(jButton9);
 
+        jButton10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/srcImages/alinearCentro.png"))); // NOI18N
         jButton10.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jPanel7.add(jButton10);
 
+        jButton11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/srcImages/alinearDerch.png"))); // NOI18N
         jButton11.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jPanel7.add(jButton11);
 
+        jButton12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/srcImages/justificar.png"))); // NOI18N
         jButton12.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jPanel7.add(jButton12);
 
+        jButton13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/srcImages/interlineado.png"))); // NOI18N
         jButton13.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jPanel7.add(jButton13);
 
-        jButton14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/srcImagen/sombreado.png"))); // NOI18N
+        jButton14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/srcImages/sombreado.png"))); // NOI18N
         jButton14.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jPanel7.add(jButton14);
 
-        jButton46.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/srcImagen/bordes.png"))); // NOI18N
+        jButton46.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/srcImages/bordes.png"))); // NOI18N
         jButton46.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jPanel7.add(jButton46);
 
@@ -536,7 +524,7 @@ public class Vista extends javax.swing.JFrame {
                 .addGroup(jPanelPárrafoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanelPárrafoLayout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, 394, Short.MAX_VALUE))
+                        .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, 394, Short.MAX_VALUE))
                     .addGroup(jPanelPárrafoLayout.createSequentialGroup()
                         .addGap(159, 159, 159)
                         .addComponent(jLabel2)))
@@ -557,9 +545,6 @@ public class Vista extends javax.swing.JFrame {
         jPanelStilos.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
         jPanelStilos.setName(""); // NOI18N
         jPanelStilos.setPreferredSize(new java.awt.Dimension(814, 250));
-
-        styles.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        styles.setText("Estilos");
 
         jPanelTittle.setPreferredSize(new java.awt.Dimension(150, 100));
 
@@ -917,19 +902,15 @@ public class Vista extends javax.swing.JFrame {
             jPanelStilosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelStilosLayout.createSequentialGroup()
                 .addGap(0, 0, 0)
-                .addGroup(jPanelStilosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(styles, javax.swing.GroupLayout.PREFERRED_SIZE, 808, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanelPaneles, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap())
+                .addComponent(jPanelPaneles, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(28, 28, 28))
         );
         jPanelStilosLayout.setVerticalGroup(
             jPanelStilosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelStilosLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jPanelPaneles, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
-                .addComponent(styles, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0))
+                .addGap(38, 38, 38))
         );
 
         jPanel3.add(jPanelStilos);
@@ -956,7 +937,7 @@ public class Vista extends javax.swing.JFrame {
 
         jPanelEdicionBuscar.setLayout(new java.awt.BorderLayout());
 
-        edicionBuscar.setIcon(new javax.swing.ImageIcon("C:\\Users\\victo\\OneDrive\\Documentos\\NetBeansProjects\\iconosWordI\\iconosWordI\\Editar\\buscar (1).png")); // NOI18N
+        edicionBuscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/srcImages/buscar (1).png"))); // NOI18N
         edicionBuscar.setText("Buscar");
         edicionBuscar.setMargin(new java.awt.Insets(12, 14, 12, 14));
         jPanelEdicionBuscar.add(edicionBuscar, java.awt.BorderLayout.CENTER);
@@ -965,7 +946,7 @@ public class Vista extends javax.swing.JFrame {
 
         jPanelEdicionReemplazar.setLayout(new java.awt.BorderLayout());
 
-        edicionReemplazar.setIcon(new javax.swing.ImageIcon("C:\\Users\\victo\\OneDrive\\Documentos\\NetBeansProjects\\iconosWordI\\iconosWordI\\Editar\\reemplazarW.png")); // NOI18N
+        edicionReemplazar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/srcImages/reemplazarW.png"))); // NOI18N
         edicionReemplazar.setText("Reemplazar");
         edicionReemplazar.setMargin(new java.awt.Insets(12, 14, 12, 14));
         jPanelEdicionReemplazar.add(edicionReemplazar, java.awt.BorderLayout.CENTER);
@@ -974,7 +955,7 @@ public class Vista extends javax.swing.JFrame {
 
         jPanelEdicionSeleccionar.setLayout(new java.awt.BorderLayout());
 
-        edicionSeleccionar.setIcon(new javax.swing.ImageIcon("C:\\Users\\victo\\OneDrive\\Documentos\\NetBeansProjects\\iconosWordI\\iconosWordI\\Editar\\seleccionar (1).png")); // NOI18N
+        edicionSeleccionar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/srcImages/seleccionar (1).png"))); // NOI18N
         edicionSeleccionar.setText("Seleccionar");
         edicionSeleccionar.setMargin(new java.awt.Insets(12, 14, 12, 14));
         jPanelEdicionSeleccionar.add(edicionSeleccionar, java.awt.BorderLayout.CENTER);
@@ -1004,20 +985,29 @@ public class Vista extends javax.swing.JFrame {
 
         jPanel3.add(jPanelEditar);
 
+        styles.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        styles.setText("Estilos");
+
         javax.swing.GroupLayout jtpHomeLayout = new javax.swing.GroupLayout(jtpHome);
         jtpHome.setLayout(jtpHomeLayout);
         jtpHomeLayout.setHorizontalGroup(
             jtpHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jtpHomeLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 2203, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addGroup(jtpHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jtpHomeLayout.createSequentialGroup()
+                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 2203, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap())
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jtpHomeLayout.createSequentialGroup()
+                        .addComponent(styles, javax.swing.GroupLayout.PREFERRED_SIZE, 808, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(118, 118, 118))))
         );
         jtpHomeLayout.setVerticalGroup(
             jtpHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jtpHomeLayout.createSequentialGroup()
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 272, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 9, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(styles, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         jTabbedPane.addTab("Inicio", null, jtpHome, "");
@@ -1107,7 +1097,7 @@ public class Vista extends javax.swing.JFrame {
             jPanelSuperiorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelSuperiorLayout.createSequentialGroup()
                 .addGap(0, 0, 0)
-                .addComponent(jPanelSuperior1, javax.swing.GroupLayout.DEFAULT_SIZE, 2209, Short.MAX_VALUE)
+                .addComponent(jPanelSuperior1, javax.swing.GroupLayout.DEFAULT_SIZE, 2215, Short.MAX_VALUE)
                 .addGap(0, 0, 0))
         );
         jPanelSuperiorLayout.setVerticalGroup(
@@ -1125,9 +1115,9 @@ public class Vista extends javax.swing.JFrame {
 
         textWords.setText("50000 palabras");
 
-        jButton1.setIcon(new javax.swing.ImageIcon("C:\\Users\\victo\\OneDrive\\Documentos\\NetBeansProjects\\iconosWordI\\iconosWordI\\lectura abajo (1).png")); // NOI18N
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/srcImages/lectura abajo (1).png"))); // NOI18N
 
-        jButton2.setIcon(new javax.swing.ImageIcon("C:\\Users\\victo\\OneDrive\\Documentos\\NetBeansProjects\\iconosWordI\\iconosWordI\\web abajo.png")); // NOI18N
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/srcImages/web abajo.png"))); // NOI18N
 
         sliderZoom.setMajorTickSpacing(10);
         sliderZoom.setMaximum(200);
@@ -1146,7 +1136,7 @@ public class Vista extends javax.swing.JFrame {
                 .addComponent(textPages, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(textWords, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 1678, Short.MAX_VALUE)
+                .addGap(0, 1684, Short.MAX_VALUE)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1201,7 +1191,7 @@ public class Vista extends javax.swing.JFrame {
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollBar1, javax.swing.GroupLayout.DEFAULT_SIZE, 433, Short.MAX_VALUE)
+                .addComponent(jScrollBar1, javax.swing.GroupLayout.DEFAULT_SIZE, 428, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -1249,7 +1239,7 @@ public class Vista extends javax.swing.JFrame {
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addComponent(jSlider1, javax.swing.GroupLayout.DEFAULT_SIZE, 445, Short.MAX_VALUE)
+                .addComponent(jSlider1, javax.swing.GroupLayout.DEFAULT_SIZE, 440, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -1305,42 +1295,38 @@ public class Vista extends javax.swing.JFrame {
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1405, Short.MAX_VALUE)
+            .addGap(0, 2098, Short.MAX_VALUE)
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 367, Short.MAX_VALUE)
+            .addGap(0, 362, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout jPanelCentralLayout = new javax.swing.GroupLayout(jPanelCentral);
         jPanelCentral.setLayout(jPanelCentralLayout);
         jPanelCentralLayout.setHorizontalGroup(
             jPanelCentralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 2106, Short.MAX_VALUE)
-            .addGroup(jPanelCentralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelCentralLayout.createSequentialGroup()
-                    .addContainerGap(353, Short.MAX_VALUE)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addContainerGap(346, Short.MAX_VALUE)))
+            .addGroup(jPanelCentralLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
             .addGroup(jPanelCentralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelCentralLayout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(jPanelScrollTop, javax.swing.GroupLayout.PREFERRED_SIZE, 2094, Short.MAX_VALUE)
+                    .addComponent(jPanelScrollTop, javax.swing.GroupLayout.PREFERRED_SIZE, 2100, Short.MAX_VALUE)
                     .addContainerGap()))
         );
         jPanelCentralLayout.setVerticalGroup(
             jPanelCentralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 457, Short.MAX_VALUE)
-            .addGroup(jPanelCentralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelCentralLayout.createSequentialGroup()
-                    .addContainerGap(70, Short.MAX_VALUE)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addContainerGap(18, Short.MAX_VALUE)))
+            .addGroup(jPanelCentralLayout.createSequentialGroup()
+                .addGap(45, 45, 45)
+                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(43, 43, 43))
             .addGroup(jPanelCentralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelCentralLayout.createSequentialGroup()
                     .addContainerGap()
                     .addComponent(jPanelScrollTop, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(403, Short.MAX_VALUE)))
+                    .addContainerGap(398, Short.MAX_VALUE)))
         );
 
         jPanelPrincipal.add(jPanelCentral, java.awt.BorderLayout.CENTER);
@@ -1368,25 +1354,17 @@ public class Vista extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnFormatActionPerformed
 
-    private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
+    private void btnPasteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPasteActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox2ActionPerformed
+    }//GEN-LAST:event_btnPasteActionPerformed
 
     private void jButton50ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton50ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton50ActionPerformed
 
-    private void jButton53ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton53ActionPerformed
+    private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton53ActionPerformed
-
-    private void jButton57ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton57ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton57ActionPerformed
-
-    private void btnPasteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPasteActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnPasteActionPerformed
+    }//GEN-LAST:event_jComboBox2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1438,7 +1416,16 @@ public class Vista extends javax.swing.JFrame {
     private javax.swing.JButton jButton12;
     private javax.swing.JButton jButton13;
     private javax.swing.JButton jButton14;
+    private javax.swing.JButton jButton16;
+    private javax.swing.JButton jButton17;
+    private javax.swing.JButton jButton18;
+    private javax.swing.JButton jButton19;
     private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton20;
+    private javax.swing.JButton jButton21;
+    private javax.swing.JButton jButton22;
+    private javax.swing.JButton jButton23;
+    private javax.swing.JButton jButton24;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton46;
@@ -1447,15 +1434,6 @@ public class Vista extends javax.swing.JFrame {
     private javax.swing.JButton jButton49;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton50;
-    private javax.swing.JButton jButton51;
-    private javax.swing.JButton jButton52;
-    private javax.swing.JButton jButton53;
-    private javax.swing.JButton jButton54;
-    private javax.swing.JButton jButton55;
-    private javax.swing.JButton jButton56;
-    private javax.swing.JButton jButton57;
-    private javax.swing.JButton jButton58;
-    private javax.swing.JButton jButton59;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
@@ -1468,11 +1446,11 @@ public class Vista extends javax.swing.JFrame {
     private javax.swing.JLabel jLabeledicion;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
-    private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel9;
     private javax.swing.JPanel jPanelCentral;

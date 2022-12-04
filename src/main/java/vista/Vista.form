@@ -64,7 +64,7 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                      <Component id="jPanelSuperior1" pref="2209" max="32767" attributes="0"/>
+                      <Component id="jPanelSuperior1" pref="2215" max="32767" attributes="0"/>
                       <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -177,8 +177,16 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" attributes="0">
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="jPanel3" min="-2" pref="2203" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" attributes="0">
+                                          <Component id="jPanel3" min="-2" pref="2203" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="1" attributes="0">
+                                          <Component id="styles" min="-2" pref="808" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="118" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -186,7 +194,8 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
                                   <Component id="jPanel3" min="-2" pref="272" max="-2" attributes="0"/>
-                                  <EmptySpace min="0" pref="9" max="32767" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
+                                  <Component id="styles" min="-2" pref="38" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -209,30 +218,49 @@
                                 </Property>
                               </Properties>
 
-                              <Layout class="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout"/>
+                              <Layout>
+                                <DimensionLayout dim="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" attributes="0">
+                                          <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
+                                          <Component id="jLabel1" min="-2" pref="213" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="1" attributes="0">
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="jPanel4" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                </DimensionLayout>
+                                <DimensionLayout dim="1">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <EmptySpace pref="43" max="32767" attributes="0"/>
+                                          <Component id="jPanel4" min="-2" pref="123" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="jLabel1" min="-2" pref="92" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                </DimensionLayout>
+                              </Layout>
                               <SubComponents>
                                 <Component class="javax.swing.JLabel" name="jLabel1">
                                   <Properties>
                                     <Property name="horizontalAlignment" type="int" value="0"/>
                                     <Property name="text" type="java.lang.String" value="Portapapeles"/>
                                   </Properties>
-                                  <Constraints>
-                                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
-                                      <GridBagConstraints gridX="0" gridY="3" gridWidth="1" gridHeight="1" fill="0" ipadX="162" ipadY="153" insetsTop="0" insetsLeft="0" insetsBottom="0" insetsRight="0" anchor="10" weightX="0.0" weightY="0.0"/>
-                                    </Constraint>
-                                  </Constraints>
                                 </Component>
                                 <Container class="javax.swing.JPanel" name="jPanel4">
-                                  <Constraints>
-                                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
-                                      <GridBagConstraints gridX="0" gridY="0" gridWidth="1" gridHeight="1" fill="0" ipadX="0" ipadY="0" insetsTop="24" insetsLeft="0" insetsBottom="0" insetsRight="0" anchor="10" weightX="0.0" weightY="0.0"/>
-                                    </Constraint>
-                                  </Constraints>
 
                                   <Layout class="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout"/>
                                   <SubComponents>
                                     <Component class="javax.swing.JButton" name="btnPaste">
                                       <Properties>
+                                        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                                          <Image iconType="3" name="/vista/srcImages/Pegar36x36.png"/>
+                                        </Property>
                                         <Property name="text" type="java.lang.String" value="Pegar"/>
                                         <Property name="alignmentX" type="float" value="0.5"/>
                                         <Property name="alignmentY" type="float" value="0.0"/>
@@ -248,6 +276,9 @@
                                     </Component>
                                     <Component class="javax.swing.JButton" name="btnCut">
                                       <Properties>
+                                        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                                          <Image iconType="3" name="/vista/srcImages/cortar18x18.png"/>
+                                        </Property>
                                         <Property name="text" type="java.lang.String" value="Cortar"/>
                                       </Properties>
                                       <Constraints>
@@ -258,6 +289,9 @@
                                     </Component>
                                     <Component class="javax.swing.JButton" name="btnCopy">
                                       <Properties>
+                                        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                                          <Image iconType="3" name="/vista/srcImages/copiar18x18.png"/>
+                                        </Property>
                                         <Property name="text" type="java.lang.String" value="Copiar"/>
                                       </Properties>
                                       <Constraints>
@@ -268,6 +302,9 @@
                                     </Component>
                                     <Component class="javax.swing.JButton" name="btnFormat">
                                       <Properties>
+                                        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                                          <Image iconType="3" name="/vista/srcImages/copiarFormato18x18.png"/>
+                                        </Property>
                                         <Property name="text" type="java.lang.String" value="Clonar formato"/>
                                       </Properties>
                                       <Events>
@@ -326,19 +363,26 @@
                                   <Layout>
                                     <DimensionLayout dim="0">
                                       <Group type="103" groupAlignment="0" attributes="0">
-                                          <Group type="102" attributes="0">
-                                              <Component id="jPanel11" min="-2" pref="483" max="-2" attributes="0"/>
-                                              <EmptySpace min="0" pref="63" max="32767" attributes="0"/>
+                                          <Group type="102" alignment="1" attributes="0">
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="jPanel10" pref="526" max="32767" attributes="0"/>
+                                              <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
                                           </Group>
-                                          <Component id="jPanel10" alignment="0" pref="0" max="32767" attributes="0"/>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+                                              <Component id="jPanel6" min="-2" pref="460" max="-2" attributes="0"/>
+                                              <EmptySpace max="32767" attributes="0"/>
+                                          </Group>
                                       </Group>
                                     </DimensionLayout>
                                     <DimensionLayout dim="1">
                                       <Group type="103" groupAlignment="0" attributes="0">
-                                          <Group type="102" attributes="0">
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
                                               <Component id="jPanel10" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                                              <Component id="jPanel11" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="jPanel6" max="32767" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
                                     </DimensionLayout>
@@ -351,7 +395,7 @@
                                         <Component class="javax.swing.JButton" name="jButton47">
                                           <Properties>
                                             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                                              <Image iconType="3" name="/vista/srcImagen/reducir fuente.png"/>
+                                              <Image iconType="3" name="/vista/srcImages/reducir fuente.png"/>
                                             </Property>
                                           </Properties>
                                           <Constraints>
@@ -386,7 +430,7 @@
                                         <Component class="javax.swing.JButton" name="jButton48">
                                           <Properties>
                                             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                                              <Image iconType="3" name="/vista/srcImagen/icons8-aumentar-fuente-24.png"/>
+                                              <Image iconType="3" name="/vista/srcImages/icons8-aumentar-fuente-24.png"/>
                                             </Property>
                                           </Properties>
                                           <Constraints>
@@ -398,7 +442,7 @@
                                         <Component class="javax.swing.JButton" name="jButton49">
                                           <Properties>
                                             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                                              <Image iconType="3" name="/vista/srcImagen/icons8-may&#xfa;scula-inicial-24.png"/>
+                                              <Image iconType="3" name="/vista/srcImages/icons8-may&#xfa;scula-inicial-24.png"/>
                                             </Property>
                                           </Properties>
                                           <Constraints>
@@ -410,7 +454,7 @@
                                         <Component class="javax.swing.JButton" name="jButton50">
                                           <Properties>
                                             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                                              <Image iconType="3" name="/vista/srcImagen/borrarFormato.png"/>
+                                              <Image iconType="3" name="/vista/srcImages/borrarFormato.png"/>
                                             </Property>
                                           </Properties>
                                           <Events>
@@ -444,123 +488,116 @@
                                         </Component>
                                       </SubComponents>
                                     </Container>
-                                    <Container class="javax.swing.JPanel" name="jPanel11">
+                                    <Container class="javax.swing.JPanel" name="jPanel6">
 
-                                      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout"/>
+                                      <Layout>
+                                        <DimensionLayout dim="0">
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="jButton16" min="-2" pref="30" max="-2" attributes="0"/>
+                                                  <EmptySpace max="32767" attributes="0"/>
+                                                  <Component id="jButton17" min="-2" pref="30" max="-2" attributes="0"/>
+                                                  <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
+                                                  <Component id="jButton18" min="-2" pref="30" max="-2" attributes="0"/>
+                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                  <Component id="jButton19" min="-2" pref="30" max="-2" attributes="0"/>
+                                                  <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
+                                                  <Component id="jButton20" min="-2" pref="30" max="-2" attributes="0"/>
+                                                  <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
+                                                  <Component id="jButton21" min="-2" pref="30" max="-2" attributes="0"/>
+                                                  <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
+                                                  <Component id="jButton22" min="-2" pref="30" max="-2" attributes="0"/>
+                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                  <Component id="jButton23" min="-2" pref="30" max="-2" attributes="0"/>
+                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                  <Component id="jButton24" min="-2" pref="30" max="-2" attributes="0"/>
+                                                  <EmptySpace min="-2" pref="73" max="-2" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                        </DimensionLayout>
+                                        <DimensionLayout dim="1">
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Group type="102" attributes="0">
+                                                  <Group type="103" groupAlignment="0" attributes="0">
+                                                      <Component id="jButton16" alignment="0" min="-2" pref="30" max="-2" attributes="0"/>
+                                                      <Component id="jButton17" alignment="0" min="-2" pref="30" max="-2" attributes="0"/>
+                                                      <Component id="jButton18" alignment="0" min="-2" pref="30" max="-2" attributes="0"/>
+                                                      <Component id="jButton19" alignment="0" min="-2" pref="30" max="-2" attributes="0"/>
+                                                      <Component id="jButton20" alignment="0" min="-2" pref="30" max="-2" attributes="0"/>
+                                                      <Component id="jButton21" alignment="0" min="-2" pref="30" max="-2" attributes="0"/>
+                                                      <Component id="jButton22" alignment="0" min="-2" pref="30" max="-2" attributes="0"/>
+                                                      <Component id="jButton23" alignment="0" min="-2" pref="30" max="-2" attributes="0"/>
+                                                      <Component id="jButton24" min="-2" pref="30" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                        </DimensionLayout>
+                                      </Layout>
                                       <SubComponents>
-                                        <Component class="javax.swing.JButton" name="jButton51">
+                                        <Component class="javax.swing.JButton" name="jButton16">
                                           <Properties>
                                             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                                              <Image iconType="3" name="/vista/srcImagen/icons8-i-18.png"/>
+                                              <Image iconType="3" name="/vista/srcImages/icons8-b-18.png"/>
                                             </Property>
                                           </Properties>
-                                          <Constraints>
-                                            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
-                                              <GridBagConstraints gridX="1" gridY="0" gridWidth="1" gridHeight="1" fill="0" ipadX="-33" ipadY="34" insetsTop="8" insetsLeft="0" insetsBottom="0" insetsRight="9" anchor="256" weightX="0.0" weightY="0.0"/>
-                                            </Constraint>
-                                          </Constraints>
                                         </Component>
-                                        <Component class="javax.swing.JButton" name="jButton52">
+                                        <Component class="javax.swing.JButton" name="jButton17">
                                           <Properties>
                                             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                                              <Image iconType="3" name="/vista/srcImagen/icons8-b-18.png"/>
+                                              <Image iconType="3" name="/vista/srcImages/icons8-i-18.png"/>
                                             </Property>
                                           </Properties>
-                                          <Constraints>
-                                            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
-                                              <GridBagConstraints gridX="0" gridY="0" gridWidth="1" gridHeight="1" fill="0" ipadX="-30" ipadY="34" insetsTop="4" insetsLeft="5" insetsBottom="0" insetsRight="9" anchor="256" weightX="0.0" weightY="0.0"/>
-                                            </Constraint>
-                                          </Constraints>
                                         </Component>
-                                        <Component class="javax.swing.JButton" name="jButton53">
+                                        <Component class="javax.swing.JButton" name="jButton18">
                                           <Properties>
                                             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                                              <Image iconType="3" name="/vista/srcImagen/icons8-u-18.png"/>
+                                              <Image iconType="3" name="/vista/srcImages/icons8-u-18.png"/>
                                             </Property>
                                           </Properties>
-                                          <Events>
-                                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton53ActionPerformed"/>
-                                          </Events>
-                                          <Constraints>
-                                            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
-                                              <GridBagConstraints gridX="2" gridY="0" gridWidth="1" gridHeight="1" fill="0" ipadX="-36" ipadY="34" insetsTop="8" insetsLeft="0" insetsBottom="0" insetsRight="9" anchor="256" weightX="0.0" weightY="0.0"/>
-                                            </Constraint>
-                                          </Constraints>
                                         </Component>
-                                        <Component class="javax.swing.JButton" name="jButton54">
+                                        <Component class="javax.swing.JButton" name="jButton19">
                                           <Properties>
                                             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                                              <Image iconType="3" name="/vista/srcImagen/tachado.png"/>
+                                              <Image iconType="3" name="/vista/srcImages/tachado.png"/>
                                             </Property>
                                           </Properties>
-                                          <Constraints>
-                                            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
-                                              <GridBagConstraints gridX="3" gridY="0" gridWidth="1" gridHeight="1" fill="0" ipadX="-32" ipadY="34" insetsTop="8" insetsLeft="0" insetsBottom="0" insetsRight="9" anchor="256" weightX="0.0" weightY="0.0"/>
-                                            </Constraint>
-                                          </Constraints>
                                         </Component>
-                                        <Component class="javax.swing.JButton" name="jButton55">
+                                        <Component class="javax.swing.JButton" name="jButton20">
                                           <Properties>
                                             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                                              <Image iconType="3" name="/vista/srcImagen/subindice.png"/>
+                                              <Image iconType="3" name="/vista/srcImages/subindice.png"/>
                                             </Property>
                                           </Properties>
-                                          <Constraints>
-                                            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
-                                              <GridBagConstraints gridX="4" gridY="0" gridWidth="1" gridHeight="1" fill="0" ipadX="-36" ipadY="34" insetsTop="8" insetsLeft="0" insetsBottom="0" insetsRight="9" anchor="256" weightX="0.0" weightY="0.0"/>
-                                            </Constraint>
-                                          </Constraints>
                                         </Component>
-                                        <Component class="javax.swing.JButton" name="jButton56">
+                                        <Component class="javax.swing.JButton" name="jButton21">
                                           <Properties>
                                             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                                              <Image iconType="3" name="/vista/srcImagen/superindice.png"/>
+                                              <Image iconType="3" name="/vista/srcImages/superindice.png"/>
                                             </Property>
                                           </Properties>
-                                          <Constraints>
-                                            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
-                                              <GridBagConstraints gridX="5" gridY="0" gridWidth="1" gridHeight="1" fill="0" ipadX="-36" ipadY="34" insetsTop="8" insetsLeft="0" insetsBottom="0" insetsRight="9" anchor="256" weightX="0.0" weightY="0.0"/>
-                                            </Constraint>
-                                          </Constraints>
                                         </Component>
-                                        <Component class="javax.swing.JButton" name="jButton57">
+                                        <Component class="javax.swing.JButton" name="jButton22">
                                           <Properties>
                                             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                                              <Image iconType="3" name="/vista/srcImagen/efectosTexto.png"/>
+                                              <Image iconType="3" name="/vista/srcImages/efectosTexto.png"/>
                                             </Property>
                                           </Properties>
-                                          <Events>
-                                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton57ActionPerformed"/>
-                                          </Events>
-                                          <Constraints>
-                                            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
-                                              <GridBagConstraints gridX="6" gridY="0" gridWidth="1" gridHeight="1" fill="0" ipadX="-36" ipadY="34" insetsTop="8" insetsLeft="0" insetsBottom="0" insetsRight="9" anchor="256" weightX="0.0" weightY="0.0"/>
-                                            </Constraint>
-                                          </Constraints>
                                         </Component>
-                                        <Component class="javax.swing.JButton" name="jButton58">
+                                        <Component class="javax.swing.JButton" name="jButton23">
                                           <Properties>
                                             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                                              <Image iconType="3" name="/vista/srcImagen/colorResaltado.png"/>
+                                              <Image iconType="3" name="/vista/srcImages/colorResaltado.png"/>
                                             </Property>
                                           </Properties>
-                                          <Constraints>
-                                            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
-                                              <GridBagConstraints gridX="7" gridY="0" gridWidth="1" gridHeight="1" fill="0" ipadX="-35" ipadY="34" insetsTop="8" insetsLeft="0" insetsBottom="0" insetsRight="9" anchor="256" weightX="0.0" weightY="0.0"/>
-                                            </Constraint>
-                                          </Constraints>
                                         </Component>
-                                        <Component class="javax.swing.JButton" name="jButton59">
+                                        <Component class="javax.swing.JButton" name="jButton24">
                                           <Properties>
                                             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                                              <Image iconType="3" name="/vista/srcImagen/colorLetra.png"/>
+                                              <Image iconType="3" name="/vista/srcImages/colorLetra.png"/>
                                             </Property>
                                           </Properties>
-                                          <Constraints>
-                                            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
-                                              <GridBagConstraints gridX="8" gridY="0" gridWidth="1" gridHeight="1" fill="0" ipadX="-30" ipadY="34" insetsTop="8" insetsLeft="0" insetsBottom="0" insetsRight="9" anchor="256" weightX="0.0" weightY="0.0"/>
-                                            </Constraint>
-                                          </Constraints>
                                         </Component>
                                       </SubComponents>
                                     </Container>
@@ -633,11 +670,17 @@
                                   <SubComponents>
                                     <Component class="javax.swing.JButton" name="btnParrafo1">
                                       <Properties>
+                                        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                                          <Image iconType="3" name="/vista/srcImages/ordenPuntos.png"/>
+                                        </Property>
                                         <Property name="horizontalTextPosition" type="int" value="0"/>
                                       </Properties>
                                     </Component>
                                     <Component class="javax.swing.JButton" name="jButton3">
                                       <Properties>
+                                        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                                          <Image iconType="3" name="/vista/srcImages/ordenNumerado.png"/>
+                                        </Property>
                                         <Property name="horizontalTextPosition" type="int" value="0"/>
                                         <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                                           <Dimension value="[24, 24]"/>
@@ -646,61 +689,88 @@
                                     </Component>
                                     <Component class="javax.swing.JButton" name="jButton4">
                                       <Properties>
+                                        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                                          <Image iconType="3" name="/vista/srcImages/ordenFormato.png"/>
+                                        </Property>
                                         <Property name="horizontalTextPosition" type="int" value="0"/>
                                       </Properties>
                                     </Component>
                                     <Component class="javax.swing.JButton" name="jButton5">
                                       <Properties>
+                                        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                                          <Image iconType="3" name="/vista/srcImages/sangriaIzq.png"/>
+                                        </Property>
                                         <Property name="horizontalTextPosition" type="int" value="0"/>
                                       </Properties>
                                     </Component>
                                     <Component class="javax.swing.JButton" name="jButton6">
                                       <Properties>
+                                        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                                          <Image iconType="3" name="/vista/srcImages/sangriaDerch.png"/>
+                                        </Property>
                                         <Property name="horizontalTextPosition" type="int" value="0"/>
                                       </Properties>
                                     </Component>
                                     <Component class="javax.swing.JButton" name="jButton7">
                                       <Properties>
+                                        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                                          <Image iconType="3" name="/vista/srcImages/ordenar.png"/>
+                                        </Property>
                                         <Property name="horizontalTextPosition" type="int" value="0"/>
                                       </Properties>
                                     </Component>
                                     <Component class="javax.swing.JButton" name="jButton8">
                                       <Properties>
                                         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                                          <Image iconType="3" name="/vista/srcImagen/alinearDerch.png"/>
+                                          <Image iconType="3" name="/vista/srcImages/iconoP.png"/>
                                         </Property>
                                         <Property name="horizontalTextPosition" type="int" value="0"/>
                                       </Properties>
                                     </Component>
                                     <Component class="javax.swing.JButton" name="jButton9">
                                       <Properties>
+                                        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                                          <Image iconType="3" name="/vista/srcImages/alinearIzq.png"/>
+                                        </Property>
                                         <Property name="horizontalTextPosition" type="int" value="0"/>
                                       </Properties>
                                     </Component>
                                     <Component class="javax.swing.JButton" name="jButton10">
                                       <Properties>
+                                        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                                          <Image iconType="3" name="/vista/srcImages/alinearCentro.png"/>
+                                        </Property>
                                         <Property name="horizontalTextPosition" type="int" value="0"/>
                                       </Properties>
                                     </Component>
                                     <Component class="javax.swing.JButton" name="jButton11">
                                       <Properties>
+                                        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                                          <Image iconType="3" name="/vista/srcImages/alinearDerch.png"/>
+                                        </Property>
                                         <Property name="horizontalTextPosition" type="int" value="0"/>
                                       </Properties>
                                     </Component>
                                     <Component class="javax.swing.JButton" name="jButton12">
                                       <Properties>
+                                        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                                          <Image iconType="3" name="/vista/srcImages/justificar.png"/>
+                                        </Property>
                                         <Property name="horizontalTextPosition" type="int" value="0"/>
                                       </Properties>
                                     </Component>
                                     <Component class="javax.swing.JButton" name="jButton13">
                                       <Properties>
+                                        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                                          <Image iconType="3" name="/vista/srcImages/interlineado.png"/>
+                                        </Property>
                                         <Property name="horizontalTextPosition" type="int" value="0"/>
                                       </Properties>
                                     </Component>
                                     <Component class="javax.swing.JButton" name="jButton14">
                                       <Properties>
                                         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                                          <Image iconType="3" name="/vista/srcImagen/sombreado.png"/>
+                                          <Image iconType="3" name="/vista/srcImages/sombreado.png"/>
                                         </Property>
                                         <Property name="horizontalTextPosition" type="int" value="0"/>
                                       </Properties>
@@ -708,7 +778,7 @@
                                     <Component class="javax.swing.JButton" name="jButton46">
                                       <Properties>
                                         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                                          <Image iconType="3" name="/vista/srcImagen/bordes.png"/>
+                                          <Image iconType="3" name="/vista/srcImages/bordes.png"/>
                                         </Property>
                                         <Property name="horizontalTextPosition" type="int" value="0"/>
                                       </Properties>
@@ -737,11 +807,8 @@
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="102" alignment="1" attributes="0">
                                           <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="styles" min="-2" pref="808" max="-2" attributes="0"/>
-                                              <Component id="jPanelPaneles" min="-2" max="-2" attributes="0"/>
-                                          </Group>
-                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="jPanelPaneles" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                                 </DimensionLayout>
@@ -750,20 +817,12 @@
                                       <Group type="102" alignment="0" attributes="0">
                                           <EmptySpace max="-2" attributes="0"/>
                                           <Component id="jPanelPaneles" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                                          <Component id="styles" min="-2" pref="38" max="-2" attributes="0"/>
-                                          <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                                 </DimensionLayout>
                               </Layout>
                               <SubComponents>
-                                <Component class="javax.swing.JLabel" name="styles">
-                                  <Properties>
-                                    <Property name="horizontalAlignment" type="int" value="0"/>
-                                    <Property name="text" type="java.lang.String" value="Estilos"/>
-                                  </Properties>
-                                </Component>
                                 <Container class="javax.swing.JPanel" name="jPanelPaneles">
 
                                   <Layout>
@@ -1408,7 +1467,7 @@
                                         <Component class="javax.swing.JButton" name="edicionBuscar">
                                           <Properties>
                                             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                                              <Image iconType="2" name="C:\Users\victo\OneDrive\Documentos\NetBeansProjects\iconosWordI\iconosWordI\Editar\buscar (1).png"/>
+                                              <Image iconType="3" name="/vista/srcImages/buscar (1).png"/>
                                             </Property>
                                             <Property name="text" type="java.lang.String" value="Buscar"/>
                                             <Property name="margin" type="java.awt.Insets" editor="org.netbeans.beaninfo.editors.InsetsEditor">
@@ -1430,7 +1489,7 @@
                                         <Component class="javax.swing.JButton" name="edicionReemplazar">
                                           <Properties>
                                             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                                              <Image iconType="2" name="C:\Users\victo\OneDrive\Documentos\NetBeansProjects\iconosWordI\iconosWordI\Editar\reemplazarW.png"/>
+                                              <Image iconType="3" name="/vista/srcImages/reemplazarW.png"/>
                                             </Property>
                                             <Property name="text" type="java.lang.String" value="Reemplazar"/>
                                             <Property name="margin" type="java.awt.Insets" editor="org.netbeans.beaninfo.editors.InsetsEditor">
@@ -1452,7 +1511,7 @@
                                         <Component class="javax.swing.JButton" name="edicionSeleccionar">
                                           <Properties>
                                             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                                              <Image iconType="2" name="C:\Users\victo\OneDrive\Documentos\NetBeansProjects\iconosWordI\iconosWordI\Editar\seleccionar (1).png"/>
+                                              <Image iconType="3" name="/vista/srcImages/seleccionar (1).png"/>
                                             </Property>
                                             <Property name="text" type="java.lang.String" value="Seleccionar"/>
                                             <Property name="margin" type="java.awt.Insets" editor="org.netbeans.beaninfo.editors.InsetsEditor">
@@ -1473,6 +1532,12 @@
                             </Container>
                           </SubComponents>
                         </Container>
+                        <Component class="javax.swing.JLabel" name="styles">
+                          <Properties>
+                            <Property name="horizontalAlignment" type="int" value="0"/>
+                            <Property name="text" type="java.lang.String" value="Estilos"/>
+                          </Properties>
+                        </Component>
                       </SubComponents>
                     </Container>
                     <Container class="javax.swing.JPanel" name="jtpInsert">
@@ -1634,7 +1699,7 @@
                           <Component id="textPages" min="-2" pref="95" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Component id="textWords" min="-2" pref="95" max="-2" attributes="0"/>
-                          <EmptySpace min="0" pref="1678" max="32767" attributes="0"/>
+                          <EmptySpace min="0" pref="1684" max="32767" attributes="0"/>
                           <Component id="jButton1" min="-2" pref="22" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="jButton2" min="-2" pref="22" max="-2" attributes="0"/>
@@ -1677,14 +1742,14 @@
                 <Component class="javax.swing.JButton" name="jButton1">
                   <Properties>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="2" name="C:\Users\victo\OneDrive\Documentos\NetBeansProjects\iconosWordI\iconosWordI\lectura abajo (1).png"/>
+                      <Image iconType="3" name="/vista/srcImages/lectura abajo (1).png"/>
                     </Property>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JButton" name="jButton2">
                   <Properties>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="2" name="C:\Users\victo\OneDrive\Documentos\NetBeansProjects\iconosWordI\iconosWordI\web abajo.png"/>
+                      <Image iconType="3" name="/vista/srcImages/web abajo.png"/>
                     </Property>
                   </Properties>
                 </Component>
@@ -1695,7 +1760,7 @@
                     <Property name="toolTipText" type="java.lang.String" value=""/>
                     <Property name="value" type="int" value="100"/>
                     <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-                      <Color id="Cursor Por defecto"/>
+                      <Color id="Default Cursor"/>
                     </Property>
                   </Properties>
                 </Component>
@@ -1761,7 +1826,7 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jScrollBar1" pref="433" max="32767" attributes="0"/>
+                          <Component id="jScrollBar1" pref="428" max="32767" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -1825,7 +1890,7 @@
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
-                          <Component id="jSlider1" pref="445" max="32767" attributes="0"/>
+                          <Component id="jSlider1" pref="440" max="32767" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -1875,18 +1940,15 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="2106" max="32767" attributes="0"/>
-                  <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="1" attributes="0">
-                          <EmptySpace pref="353" max="32767" attributes="0"/>
-                          <Component id="jPanel2" max="32767" attributes="0"/>
-                          <EmptySpace pref="346" max="32767" attributes="0"/>
-                      </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jPanel2" max="32767" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                   </Group>
-                  <Group type="103" rootIndex="2" groupAlignment="0" attributes="0">
+                  <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jPanelScrollTop" pref="2094" max="32767" attributes="0"/>
+                          <Component id="jPanelScrollTop" pref="2100" max="32767" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -1894,19 +1956,16 @@
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="457" max="32767" attributes="0"/>
-                  <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="1" attributes="0">
-                          <EmptySpace pref="70" max="32767" attributes="0"/>
-                          <Component id="jPanel2" max="32767" attributes="0"/>
-                          <EmptySpace pref="18" max="32767" attributes="0"/>
-                      </Group>
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
+                      <Component id="jPanel2" max="32767" attributes="0"/>
+                      <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
                   </Group>
-                  <Group type="103" rootIndex="2" groupAlignment="0" attributes="0">
+                  <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="jPanelScrollTop" min="-2" pref="48" max="-2" attributes="0"/>
-                          <EmptySpace pref="403" max="32767" attributes="0"/>
+                          <EmptySpace pref="398" max="32767" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -1968,12 +2027,12 @@
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="1405" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="2098" max="32767" attributes="0"/>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="367" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="362" max="32767" attributes="0"/>
                   </Group>
                 </DimensionLayout>
               </Layout>
