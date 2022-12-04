@@ -4,6 +4,13 @@
  */
 package vista;
 
+import java.awt.event.KeyEvent;
+import java.awt.event.MouseWheelEvent;
+import java.awt.event.MouseWheelListener;
+import javax.swing.JFileChooser;
+import javax.swing.JOptionPane;
+import org.jdesktop.swingx.autocomplete.AutoCompleteDecorator;
+
 
 
 /**
@@ -16,11 +23,38 @@ public class Vista extends javax.swing.JFrame {
      * Creates new form Vista
      */
     public Vista() {
+        
         initComponents();
-        //AutoCompleteDecorator.decorate(jComboBox2);
-        //AutoCompleteDecorator.decorate(jComboBox3);
+        AutoCompleteDecorator.decorate(jComboBox2);
+        AutoCompleteDecorator.decorate(jComboBox3);
+        
+        
+        //ZOOM y modificación del label de zoom
+        sliderZoom.addMouseWheelListener(new MouseWheelListener(){
+            @Override
+            public void mouseWheelMoved(MouseWheelEvent e) {
+                if(e.isControlDown()) {
+                    sliderZoom.setValue(sliderZoom.getValue()-e.getUnitsToScroll());
+                    labelZoom.setText(sliderZoom.getValue()+"");
+                }
+            }
+        });
     }
-
+    
+    //Para las fuentes
+    public void keyPressed(java.awt.event.KeyEvent evt) {
+            if (evt.isControlDown() && evt.getKeyCode() == KeyEvent.VK_B) {
+                btnNegrita.setSelected(true);
+                System.out.println("Negritas");
+            } else if (evt.isControlDown() && evt.getKeyCode() == KeyEvent.VK_I) {
+                btnItalica.setSelected(true);
+                System.out.println("Cursivas");
+            } else if (evt.isControlDown() && evt.getKeyCode() == KeyEvent.VK_U) {
+                btnSubrayado.setSelected(true);
+                System.out.println("Subrayadas");
+            }
+        }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -31,6 +65,8 @@ public class Vista extends javax.swing.JFrame {
     private void initComponents() {
         java.awt.GridBagConstraints gridBagConstraints;
 
+        buttonGroup1 = new javax.swing.ButtonGroup();
+        buttonGroup3 = new javax.swing.ButtonGroup();
         jPanelPrincipal = new javax.swing.JPanel();
         jPanelSuperior = new javax.swing.JPanel();
         jPanelSuperior1 = new javax.swing.JPanel();
@@ -56,10 +92,10 @@ public class Vista extends javax.swing.JFrame {
         jButton50 = new javax.swing.JButton();
         jComboBox3 = new javax.swing.JComboBox<>();
         jPanel6 = new javax.swing.JPanel();
-        jButton16 = new javax.swing.JButton();
-        jButton17 = new javax.swing.JButton();
-        jButton18 = new javax.swing.JButton();
-        jButton19 = new javax.swing.JButton();
+        btnNegrita = new javax.swing.JButton();
+        btnItalica = new javax.swing.JButton();
+        btnSubrayado = new javax.swing.JButton();
+        btnTachado = new javax.swing.JButton();
         jButton20 = new javax.swing.JButton();
         jButton21 = new javax.swing.JButton();
         jButton22 = new javax.swing.JButton();
@@ -114,6 +150,7 @@ public class Vista extends javax.swing.JFrame {
         jPanelIntense1 = new javax.swing.JPanel();
         lFuenteIn1 = new javax.swing.JLabel();
         lIntense1 = new javax.swing.JLabel();
+        styles = new javax.swing.JLabel();
         jPanelEditar = new javax.swing.JPanel();
         panelEdicion = new javax.swing.JPanel();
         jLabeledicion = new javax.swing.JLabel();
@@ -124,7 +161,6 @@ public class Vista extends javax.swing.JFrame {
         edicionReemplazar = new javax.swing.JButton();
         jPanelEdicionSeleccionar = new javax.swing.JPanel();
         edicionSeleccionar = new javax.swing.JButton();
-        styles = new javax.swing.JLabel();
         jtpInsert = new javax.swing.JPanel();
         jtpDesign = new javax.swing.JPanel();
         jtpLayout = new javax.swing.JPanel();
@@ -150,7 +186,17 @@ public class Vista extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowClosed(java.awt.event.WindowEvent evt) {
+                formWindowClosed(evt);
+            }
+        });
 
+        jPanelPrincipal.addMouseWheelListener(new java.awt.event.MouseWheelListener() {
+            public void mouseWheelMoved(java.awt.event.MouseWheelEvent evt) {
+                jPanelPrincipalMouseWheelMoved(evt);
+            }
+        });
         jPanelPrincipal.setLayout(new java.awt.BorderLayout());
 
         jPanelSuperior.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
@@ -260,7 +306,7 @@ public class Vista extends javax.swing.JFrame {
         jPanelPortapapelesLayout.setVerticalGroup(
             jPanelPortapapelesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelPortapapelesLayout.createSequentialGroup()
-                .addContainerGap(43, Short.MAX_VALUE)
+                .addContainerGap(47, Short.MAX_VALUE)
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -297,7 +343,7 @@ public class Vista extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(7, 8, 7, 8);
         jPanel10.add(jButton47, gridBagConstraints);
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Abadi MT Condensed Light", "Aharoni", "Aldhabi", "Andalus", "Angsana New", "AngsanaUPC", "Aparajita", "Arabic Typesetting", "Arial", "Arial Black", "Arial Nova", "Batang", "BatangChe", "Book Antiqua", "Browallia New", "BrowalliaUPC", "Calibri", "Calibri Light", "Calisto MT", "Cambria", "Cambria Math", "Candara", "Century Gothic", "Comic Sans MS", "Consolas", "Constantia", "Copperplate Gothic Bold", "Copperplate Gothic Light", "Corbel", "Cordia New", "CordiaUPC", "Courier New", "DaunPenh", "David", "Dengxian", "DFKai-SB", "DilleniaUPC", "DokChampa", "Dotum", "DotumChe", "Ebrima", "Estrangelo Edessa", "EucrosiaUPC", "Euphemia", "FangSong", "Franklin Gothic Medium", "FrankRuehl", "FreesiaUPC", "Gabriola", "Gadugi", "Gautami", "Georgia", "Georgia Pro", "Gill Sans Nova", "Gisha", "Gulim", "GulimChe", "Gungsuh", "GungsuhChe", "Impact", "IrisUPC", "Iskoola Pota", "JasmineUPC", "KaiTi", "Kalinga", "Kartika", "Khmer UI", "KodchiangUPC", "Kokila", "Lao UI", "Latha", "Leelawadee", "Leelawadee UI", "Levenim MT", "LilyUPC", "Lucida Console", "Lucida Handwriting Italic", "Lucida Sans Unicode", "Malgun Gothic", "Mangal", "Manny ITC", "Marlett", "Meiryo", "Meiryo UI", "Microsoft Himalaya", "Microsoft JhengHei", "Microsoft JhengHei UI", "Microsoft New Tai Lue", "Microsoft PhagsPa", "Microsoft Sans Serif", "Microsoft Tai Le", "Microsoft Uighur", "Microsoft YaHei", "Microsoft YaHei UI", "Microsoft Yi Baiti", "MingLiU, PMingLiU", "MingLiU-ExtB, PMingLiU-ExtB", "MingLiU_HKSCS", "MingLiU_HKSCS-ExtB", "Miriam, Miriam Fixed", "Mongolian Baiti", "MoolBoran", "MS Gothic, MS PGothic", "MS Mincho, MS PMincho", "MS UI Gothic", "MV Boli", "Myanmar Text", "Narkisim", "Neue Haas Grotesk Text Pro", "News Gothic MT", "Nirmala UI", "NSimSun", "Nyala", "Palatino Linotype", "Plantagenet Cherokee", "Raavi", "Rockwell Nova", "Rod", "Sakkal Majalla", "Sanskrit Text", "Segoe MDL2 Assets", "Segoe Print", "Segoe Script", "Segoe UI v5.001​", "Segoe UI v5.012​", "Segoe UI v5.273​", "Segoe UI v5.35", "Segoe UI Historic4​", "Segoe UI Symbol", "Shonar Bangla", "Shruti", "SimHei", "SimKai", "Simplified Arabic", "SimSun", "SimSun-ExtB", "Sitka Banner", "Sitka Display", "Sitka Heading", "Sitka Small", "Sitka Subheading", "Sitka Text", "Sylfaen", "Symbol", "Tahoma", "Times New Roman", "Traditional Arabic", "Trebuchet MS", "Tunga", "Urdu Typesetting", "Utsaah", "Vani", "Verdana", "Verdana Pro", "Vijaya", "Vrinda", "Webdings", "Westminster", "Wingdings", "Yu Gothic", "Yu Gothic UI", "Yu Mincho" }));
         jComboBox2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox2ActionPerformed(evt);
@@ -347,7 +393,7 @@ public class Vista extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(7, 8, 7, 8);
         jPanel10.add(jButton50, gridBagConstraints);
 
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "8", "9", "10", "11", "12", "14", "16", "18", "20", "24", "26", "28", "36", "48", "72" }));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 0;
@@ -357,13 +403,17 @@ public class Vista extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(7, 8, 7, 8);
         jPanel10.add(jComboBox3, gridBagConstraints);
 
-        jButton16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/srcImages/icons8-b-18.png"))); // NOI18N
+        btnNegrita.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/srcImages/icons8-b-18.png"))); // NOI18N
+        buttonGroup3.add(btnNegrita);
 
-        jButton17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/srcImages/icons8-i-18.png"))); // NOI18N
+        btnItalica.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/srcImages/icons8-i-18.png"))); // NOI18N
+        buttonGroup3.add(btnItalica);
 
-        jButton18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/srcImages/icons8-u-18.png"))); // NOI18N
+        btnSubrayado.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/srcImages/icons8-u-18.png"))); // NOI18N
+        buttonGroup3.add(btnSubrayado);
 
-        jButton19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/srcImages/tachado.png"))); // NOI18N
+        btnTachado.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/srcImages/tachado.png"))); // NOI18N
+        buttonGroup3.add(btnTachado);
 
         jButton20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/srcImages/subindice.png"))); // NOI18N
 
@@ -381,13 +431,13 @@ public class Vista extends javax.swing.JFrame {
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton16, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnNegrita, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton17, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnItalica, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(16, 16, 16)
-                .addComponent(jButton18, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnSubrayado, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jButton19, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnTachado, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(34, 34, 34)
                 .addComponent(jButton20, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(29, 29, 29)
@@ -404,10 +454,10 @@ public class Vista extends javax.swing.JFrame {
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton16, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton17, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton18, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton19, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnNegrita, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnItalica, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnSubrayado, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnTachado, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton20, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton21, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton22, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -422,7 +472,7 @@ public class Vista extends javax.swing.JFrame {
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel10, javax.swing.GroupLayout.DEFAULT_SIZE, 526, Short.MAX_VALUE)
+                .addComponent(jPanel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(14, 14, 14))
             .addGroup(jPanel9Layout.createSequentialGroup()
                 .addGap(32, 32, 32)
@@ -489,18 +539,22 @@ public class Vista extends javax.swing.JFrame {
         jPanel7.add(jButton8);
 
         jButton9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/srcImages/alinearIzq.png"))); // NOI18N
+        buttonGroup1.add(jButton9);
         jButton9.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jPanel7.add(jButton9);
 
         jButton10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/srcImages/alinearCentro.png"))); // NOI18N
+        buttonGroup1.add(jButton10);
         jButton10.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jPanel7.add(jButton10);
 
         jButton11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/srcImages/alinearDerch.png"))); // NOI18N
+        buttonGroup1.add(jButton11);
         jButton11.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jPanel7.add(jButton11);
 
         jButton12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/srcImages/justificar.png"))); // NOI18N
+        buttonGroup1.add(jButton12);
         jButton12.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jPanel7.add(jButton12);
 
@@ -524,7 +578,7 @@ public class Vista extends javax.swing.JFrame {
                 .addGroup(jPanelPárrafoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanelPárrafoLayout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, 394, Short.MAX_VALUE))
+                        .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, 392, Short.MAX_VALUE))
                     .addGroup(jPanelPárrafoLayout.createSequentialGroup()
                         .addGap(159, 159, 159)
                         .addComponent(jLabel2)))
@@ -546,7 +600,14 @@ public class Vista extends javax.swing.JFrame {
         jPanelStilos.setName(""); // NOI18N
         jPanelStilos.setPreferredSize(new java.awt.Dimension(814, 250));
 
+        jPanelTittle.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanelTittle.setDebugGraphicsOptions(javax.swing.DebugGraphics.NONE_OPTION);
         jPanelTittle.setPreferredSize(new java.awt.Dimension(150, 100));
+        jPanelTittle.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanelTittleMouseClicked(evt);
+            }
+        });
 
         lFuenteT.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
         lFuenteT.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -562,7 +623,7 @@ public class Vista extends javax.swing.JFrame {
             .addGroup(jPanelTittleLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanelTittleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lFuenteT, javax.swing.GroupLayout.DEFAULT_SIZE, 138, Short.MAX_VALUE)
+                    .addComponent(lFuenteT, javax.swing.GroupLayout.DEFAULT_SIZE, 134, Short.MAX_VALUE)
                     .addComponent(lTitle, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
@@ -571,12 +632,19 @@ public class Vista extends javax.swing.JFrame {
             .addGroup(jPanelTittleLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(lFuenteT, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(lTitle)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        jPanelSubtittle.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanelSubtittle.setDebugGraphicsOptions(javax.swing.DebugGraphics.NONE_OPTION);
         jPanelSubtittle.setPreferredSize(new java.awt.Dimension(150, 100));
+        jPanelSubtittle.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanelTittleMouseClicked(evt);
+            }
+        });
 
         lFuenteSub.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         lFuenteSub.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -592,7 +660,7 @@ public class Vista extends javax.swing.JFrame {
             .addGroup(jPanelSubtittleLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanelSubtittleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lFuenteSub, javax.swing.GroupLayout.DEFAULT_SIZE, 138, Short.MAX_VALUE)
+                    .addComponent(lFuenteSub, javax.swing.GroupLayout.DEFAULT_SIZE, 134, Short.MAX_VALUE)
                     .addComponent(lSubtitle, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
@@ -601,12 +669,19 @@ public class Vista extends javax.swing.JFrame {
             .addGroup(jPanelSubtittleLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(lFuenteSub, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(lSubtitle)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        jPanelSubtle.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanelSubtle.setDebugGraphicsOptions(javax.swing.DebugGraphics.NONE_OPTION);
         jPanelSubtle.setPreferredSize(new java.awt.Dimension(150, 100));
+        jPanelSubtle.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanelTittleMouseClicked(evt);
+            }
+        });
 
         lFuenteSubtle.setFont(new java.awt.Font("Segoe UI", 2, 18)); // NOI18N
         lFuenteSubtle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -622,7 +697,7 @@ public class Vista extends javax.swing.JFrame {
             .addGroup(jPanelSubtleLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanelSubtleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lFuenteSubtle, javax.swing.GroupLayout.DEFAULT_SIZE, 138, Short.MAX_VALUE)
+                    .addComponent(lFuenteSubtle, javax.swing.GroupLayout.DEFAULT_SIZE, 134, Short.MAX_VALUE)
                     .addComponent(lSubtle, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
@@ -631,12 +706,19 @@ public class Vista extends javax.swing.JFrame {
             .addGroup(jPanelSubtleLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(lFuenteSubtle, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(lSubtle)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        jPanelEmphasis.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanelEmphasis.setDebugGraphicsOptions(javax.swing.DebugGraphics.NONE_OPTION);
         jPanelEmphasis.setPreferredSize(new java.awt.Dimension(150, 100));
+        jPanelEmphasis.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanelTittleMouseClicked(evt);
+            }
+        });
 
         lFuenteEm.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
         lFuenteEm.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -652,7 +734,7 @@ public class Vista extends javax.swing.JFrame {
             .addGroup(jPanelEmphasisLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanelEmphasisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lFuenteEm, javax.swing.GroupLayout.DEFAULT_SIZE, 138, Short.MAX_VALUE)
+                    .addComponent(lFuenteEm, javax.swing.GroupLayout.DEFAULT_SIZE, 134, Short.MAX_VALUE)
                     .addComponent(lEmphasis, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
@@ -661,12 +743,19 @@ public class Vista extends javax.swing.JFrame {
             .addGroup(jPanelEmphasisLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(lFuenteEm, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(lEmphasis)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        jPanelIntense.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanelIntense.setDebugGraphicsOptions(javax.swing.DebugGraphics.NONE_OPTION);
         jPanelIntense.setPreferredSize(new java.awt.Dimension(150, 100));
+        jPanelIntense.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanelTittleMouseClicked(evt);
+            }
+        });
 
         lFuenteIn.setFont(new java.awt.Font("Segoe UI", 2, 18)); // NOI18N
         lFuenteIn.setForeground(new java.awt.Color(51, 102, 255));
@@ -684,7 +773,7 @@ public class Vista extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanelIntenseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lFuenteIn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(lIntense, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 138, Short.MAX_VALUE))
+                    .addComponent(lIntense, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 134, Short.MAX_VALUE))
                 .addContainerGap())
         );
         jPanelIntenseLayout.setVerticalGroup(
@@ -692,12 +781,19 @@ public class Vista extends javax.swing.JFrame {
             .addGroup(jPanelIntenseLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(lFuenteIn, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(lIntense)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        jPanelTittle1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanelTittle1.setDebugGraphicsOptions(javax.swing.DebugGraphics.NONE_OPTION);
         jPanelTittle1.setPreferredSize(new java.awt.Dimension(150, 100));
+        jPanelTittle1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanelTittleMouseClicked(evt);
+            }
+        });
 
         lFuenteT1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         lFuenteT1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -713,7 +809,7 @@ public class Vista extends javax.swing.JFrame {
             .addGroup(jPanelTittle1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanelTittle1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lFuenteT1, javax.swing.GroupLayout.DEFAULT_SIZE, 138, Short.MAX_VALUE)
+                    .addComponent(lFuenteT1, javax.swing.GroupLayout.DEFAULT_SIZE, 134, Short.MAX_VALUE)
                     .addComponent(lTitle1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
@@ -722,12 +818,19 @@ public class Vista extends javax.swing.JFrame {
             .addGroup(jPanelTittle1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(lFuenteT1, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(lTitle1)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        jPanelSubtittle1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanelSubtittle1.setDebugGraphicsOptions(javax.swing.DebugGraphics.NONE_OPTION);
         jPanelSubtittle1.setPreferredSize(new java.awt.Dimension(150, 100));
+        jPanelSubtittle1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanelTittleMouseClicked(evt);
+            }
+        });
 
         lFuenteSub1.setFont(new java.awt.Font("DejaVu Sans", 0, 24)); // NOI18N
         lFuenteSub1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -743,7 +846,7 @@ public class Vista extends javax.swing.JFrame {
             .addGroup(jPanelSubtittle1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanelSubtittle1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lFuenteSub1, javax.swing.GroupLayout.DEFAULT_SIZE, 138, Short.MAX_VALUE)
+                    .addComponent(lFuenteSub1, javax.swing.GroupLayout.DEFAULT_SIZE, 134, Short.MAX_VALUE)
                     .addComponent(lSubtitle1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
@@ -752,12 +855,19 @@ public class Vista extends javax.swing.JFrame {
             .addGroup(jPanelSubtittle1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(lFuenteSub1, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(lSubtitle1)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        jPanelSubtle1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanelSubtle1.setDebugGraphicsOptions(javax.swing.DebugGraphics.NONE_OPTION);
         jPanelSubtle1.setPreferredSize(new java.awt.Dimension(150, 100));
+        jPanelSubtle1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanelTittleMouseClicked(evt);
+            }
+        });
 
         lFuenteSubtle1.setFont(new java.awt.Font("Sitka Text", 2, 18)); // NOI18N
         lFuenteSubtle1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -773,7 +883,7 @@ public class Vista extends javax.swing.JFrame {
             .addGroup(jPanelSubtle1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanelSubtle1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lFuenteSubtle1, javax.swing.GroupLayout.DEFAULT_SIZE, 138, Short.MAX_VALUE)
+                    .addComponent(lFuenteSubtle1, javax.swing.GroupLayout.DEFAULT_SIZE, 134, Short.MAX_VALUE)
                     .addComponent(lSubtle1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
@@ -782,12 +892,19 @@ public class Vista extends javax.swing.JFrame {
             .addGroup(jPanelSubtle1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(lFuenteSubtle1, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(lSubtle1)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        jPanelEmphasis1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanelEmphasis1.setDebugGraphicsOptions(javax.swing.DebugGraphics.NONE_OPTION);
         jPanelEmphasis1.setPreferredSize(new java.awt.Dimension(150, 100));
+        jPanelEmphasis1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanelTittleMouseClicked(evt);
+            }
+        });
 
         lFuenteEm1.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         lFuenteEm1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -803,7 +920,7 @@ public class Vista extends javax.swing.JFrame {
             .addGroup(jPanelEmphasis1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanelEmphasis1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lFuenteEm1, javax.swing.GroupLayout.DEFAULT_SIZE, 138, Short.MAX_VALUE)
+                    .addComponent(lFuenteEm1, javax.swing.GroupLayout.DEFAULT_SIZE, 134, Short.MAX_VALUE)
                     .addComponent(lEmphasis1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
@@ -812,12 +929,19 @@ public class Vista extends javax.swing.JFrame {
             .addGroup(jPanelEmphasis1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(lFuenteEm1, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(lEmphasis1)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        jPanelIntense1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanelIntense1.setDebugGraphicsOptions(javax.swing.DebugGraphics.NONE_OPTION);
         jPanelIntense1.setPreferredSize(new java.awt.Dimension(150, 100));
+        jPanelIntense1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanelTittleMouseClicked(evt);
+            }
+        });
 
         lFuenteIn1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         lFuenteIn1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -833,7 +957,7 @@ public class Vista extends javax.swing.JFrame {
             .addGroup(jPanelIntense1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanelIntense1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lFuenteIn1, javax.swing.GroupLayout.DEFAULT_SIZE, 138, Short.MAX_VALUE)
+                    .addComponent(lFuenteIn1, javax.swing.GroupLayout.DEFAULT_SIZE, 134, Short.MAX_VALUE)
                     .addComponent(lIntense1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
@@ -842,7 +966,7 @@ public class Vista extends javax.swing.JFrame {
             .addGroup(jPanelIntense1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(lFuenteIn1, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(lIntense1)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -855,25 +979,25 @@ public class Vista extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanelPanelesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanelPanelesLayout.createSequentialGroup()
-                        .addComponent(jPanelTittle, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jPanelTittle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jPanelSubtittle, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jPanelSubtittle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jPanelSubtle, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jPanelSubtle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jPanelEmphasis, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jPanelEmphasis, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jPanelIntense, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jPanelIntense, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanelPanelesLayout.createSequentialGroup()
-                        .addComponent(jPanelTittle1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jPanelTittle1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jPanelSubtittle1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jPanelSubtittle1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jPanelSubtle1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jPanelSubtle1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jPanelEmphasis1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jPanelEmphasis1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jPanelIntense1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jPanelIntense1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jPanelPanelesLayout.setVerticalGroup(
@@ -896,21 +1020,29 @@ public class Vista extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        styles.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        styles.setText("Estilos");
+        styles.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
+
         javax.swing.GroupLayout jPanelStilosLayout = new javax.swing.GroupLayout(jPanelStilos);
         jPanelStilos.setLayout(jPanelStilosLayout);
         jPanelStilosLayout.setHorizontalGroup(
             jPanelStilosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelStilosLayout.createSequentialGroup()
-                .addGap(0, 0, 0)
                 .addComponent(jPanelPaneles, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(28, 28, 28))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelStilosLayout.createSequentialGroup()
+                .addComponent(styles)
+                .addGap(384, 384, 384))
         );
         jPanelStilosLayout.setVerticalGroup(
             jPanelStilosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelStilosLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jPanelPaneles, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(38, 38, 38))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(styles)
+                .addContainerGap())
         );
 
         jPanel3.add(jPanelStilos);
@@ -985,29 +1117,20 @@ public class Vista extends javax.swing.JFrame {
 
         jPanel3.add(jPanelEditar);
 
-        styles.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        styles.setText("Estilos");
-
         javax.swing.GroupLayout jtpHomeLayout = new javax.swing.GroupLayout(jtpHome);
         jtpHome.setLayout(jtpHomeLayout);
         jtpHomeLayout.setHorizontalGroup(
             jtpHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jtpHomeLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jtpHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jtpHomeLayout.createSequentialGroup()
-                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 2203, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap())
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jtpHomeLayout.createSequentialGroup()
-                        .addComponent(styles, javax.swing.GroupLayout.PREFERRED_SIZE, 808, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(118, 118, 118))))
+                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 2203, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         jtpHomeLayout.setVerticalGroup(
             jtpHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jtpHomeLayout.createSequentialGroup()
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 272, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(styles, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(44, Short.MAX_VALUE))
         );
 
         jTabbedPane.addTab("Inicio", null, jtpHome, "");
@@ -1267,7 +1390,8 @@ public class Vista extends javax.swing.JFrame {
         jPanelScrollTop.setMaximumSize(new java.awt.Dimension(720, 300));
         jPanelScrollTop.setPreferredSize(new java.awt.Dimension(720, 50));
 
-        jSlider2.setBackground(new java.awt.Color(153, 153, 153));
+        jSlider2.setBackground(new java.awt.Color(102, 102, 102));
+        jSlider2.setForeground(new java.awt.Color(102, 102, 102));
         jSlider2.setPaintLabels(true);
         jSlider2.setPaintTicks(true);
         jSlider2.setPaintTrack(false);
@@ -1285,8 +1409,8 @@ public class Vista extends javax.swing.JFrame {
         jPanelScrollTopLayout.setVerticalGroup(
             jPanelScrollTopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelScrollTopLayout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addComponent(jSlider2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap()
+                .addComponent(jSlider2, javax.swing.GroupLayout.DEFAULT_SIZE, 42, Short.MAX_VALUE))
         );
 
         jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -1366,6 +1490,20 @@ public class Vista extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBox2ActionPerformed
 
+    private void jPanelTittleMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelTittleMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jPanelTittleMouseClicked
+
+    private void jPanelPrincipalMouseWheelMoved(java.awt.event.MouseWheelEvent evt) {//GEN-FIRST:event_jPanelPrincipalMouseWheelMoved
+
+    }//GEN-LAST:event_jPanelPrincipalMouseWheelMoved
+
+    private void formWindowClosed(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosed
+        
+        cerrar();
+        
+    }//GEN-LAST:event_formWindowClosed
+
     /**
      * @param args the command line arguments
      */
@@ -1399,14 +1537,34 @@ public class Vista extends javax.swing.JFrame {
                 new Vista().setVisible(true);
             }
         });
+        
     }
-
+    
+    private void cerrar(){
+        String botones[] = {"Cerrar", "Cancelar"};
+        int eleccion = JOptionPane.showOptionDialog(this,"¿Desea cerrar sin guardar?","Cuidado",
+                0,0,null, botones, this);
+        if(eleccion==JOptionPane.YES_OPTION){
+            JFileChooser jfc = new JFileChooser();
+            jfc.setVisible(true);
+            System.exit(0);
+        } else if(eleccion==JOptionPane.NO_OPTION){
+            System.out.println("No quiere cerrar");
+        }
+    }
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCopy;
     private javax.swing.JButton btnCut;
     private javax.swing.JButton btnFormat;
+    private javax.swing.JButton btnItalica;
+    private javax.swing.JButton btnNegrita;
     private javax.swing.JButton btnParrafo1;
     private javax.swing.JButton btnPaste;
+    private javax.swing.JButton btnSubrayado;
+    private javax.swing.JButton btnTachado;
+    private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.ButtonGroup buttonGroup3;
     private javax.swing.JButton edicionBuscar;
     private javax.swing.JButton edicionReemplazar;
     private javax.swing.JButton edicionSeleccionar;
@@ -1416,10 +1574,6 @@ public class Vista extends javax.swing.JFrame {
     private javax.swing.JButton jButton12;
     private javax.swing.JButton jButton13;
     private javax.swing.JButton jButton14;
-    private javax.swing.JButton jButton16;
-    private javax.swing.JButton jButton17;
-    private javax.swing.JButton jButton18;
-    private javax.swing.JButton jButton19;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton20;
     private javax.swing.JButton jButton21;
